@@ -2,8 +2,6 @@ Meeting Notes Friday 7/1
 ==========
 
 
-
-
 Styling Photos
 -----
 * Native Stock Photos - Liz emailed to see about how much or free because of using for an educational project
@@ -32,3 +30,13 @@ Page Layout
 * Learn Page (see above)
 * Test
 * About Us
+
+
+Weekend Plan
+=====
+* Aziza: JS for the Test Page
+* Derek: JS for the Learn page
+* Liz: html/css
+* Alison: images & assets
+* EVERYONE: come up with the about me page
+* EVERYONE: when coding, on your html page write in the body of the <main><body></body></main>
