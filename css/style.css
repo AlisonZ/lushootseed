@@ -24,7 +24,7 @@ header img {
   width: 100%;
   min-width: 1150px;
   min-height: 113px;
-  opacity: 0.4;
+  opacity: 0.8;
 }
 
 h1 {
@@ -73,5 +73,5 @@ footer {
 
 footer img {
   width: 100%;
-  opacity: 0.5;
+  opacity: 0.8;
 }
