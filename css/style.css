@@ -59,6 +59,8 @@ h1 {
 /*main styling*/
 main {
   height: 580px;
+  width: 960px;
+  margin: 0px auto;
 }
 
 /*footer styling*/
