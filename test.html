@@ -1,43 +1,40 @@
 <!DOCTYPE html>
 <html>
+  <title>
+   Exam
+  </title>
   <head>
-    <title>Lushootseed</title>
-    <link href="css/reset.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/style_test.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Rock+Salt|Permanent+Marker" rel="stylesheet">
+    <!-- link to css -->
+   <link rel="stylesheet" href="css/style_test.css">
   </head>
   <body>
     <header>
-      <img src="image/puyallup_fair_grand_champion2.jpg">
-      <!-- <img src="image/siagut_basket.jpg"> -->
-      <h1>Learn Lushootseed</h1>
-      <ul id="nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="learn.html">Learn The Language</a></li>
-        <li><a href="about_us.html">About Us</a></li>
-      </ul>
     </header>
     <main>
       <p>How To play :</p>
       <p>please select the right match :</p>
+      <!-- place to hold english radio button -->
       <div id="english_radio"></div>
+       <!-- place to hold lushootsed radio button -->
       <div id="lushootseed_radio"></div>
+        <!-- button to check if it is the right answer -->
       <div id = "submitButton">
       <input type="submit" value="check my answer" onclick="newfunction()"/>
       </div>
+       <!-- Table to show the answer -->
       <table id="result">
       <tr>
+           <!-- english header -->
         <td id="englishHeader">English</td>
+           <!-- lushootseed header -->
         <td id="lashooHeader">Lashoo</td>
       </tr>
       </table>
+      <!-- score holder -->
       <p id="scors"></p>
      </main>
-    <footer>
-      <img src="image/puyallup_fair_grand_champion2.jpg">
-      <!-- <img src="image/siagut_basket.jpg"> -->
-    </footer>
-    <script src="js/test.js">
-  </body>
+     <footer>
+     </footer>
+     <script src="js/test.js"></script>
+   </body>
 </html>
