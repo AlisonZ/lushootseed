@@ -3,22 +3,22 @@ Wordlist
 Food - audio clip
 ****
 1. water - Zeke Youtube min 1:43; pexels
-2. carrot - Phrases; both from pexels; extracted sound
-3. salmon -audio clip; pixabay; saved sound clip
-4. oyster - audio clip; unsplash; saved sound clip
-5. candy - phrases; pixabay ; need to figure out word
-6. coffee - phrases; all from pexels; extracted word
-7. berry/fruit - phrases; unsplash; extracted file
-8. soup - phrases; pexels; extracted sound
-9. eggs - Phrases; pexels; extracted sound
-10. clam - audio clip; clam: pexels; clam_again: unsplash; saved sound
-11. mussels - audio clip; mussels:pixabay; mussels_again:unsplash; saved sound
-12. crab - audio clip; pexels; saved sound
-13. geoduck - audio clip; pixabay, maybe look for another; saved sound
-14. potatoes- phrases (double-check word in textbook);  pixabay; extracted sound
-15. octopus - audio clip; pixabay; saved sound
-16. raspberry - audio clip; pexels (extra - too confusing with generic berries); saved sound
- 
+2. carrot= šəgʷaq;image from pexels;
+3. salmon = sʔuladxʷ; image from pixabay;
+4. oyster = ƛ̕ux̌ʷƛ̕ux̌ʷ; image from unsplash;
+5. candy =sʔəɬəd; - image from pixabay ; DOUBLE-CHECK word
+6. coffee = kupi;- image from pexels;
+7. berry/fruit = sq̓ʷəlaɬəd; image from unsplash;
+8. soup =sɬub;-image from pexels;
+9. eggs = ʔəʔus;- image from pexels;
+10. clam = sʔax̌ʷuʔ;image clam from pexels; image clam_again: unsplash;
+11. mussels = tulqʷ; - image mussels from pixabay; image mussels_again:unsplash;
+12. crab = bəsqʷ; - image from pexels;
+13. geoduck = gʷidəq; image from pixabay, maybe look for another;
+14. potatoes = spiqʷuc; image from pixabay; DOUBLE CHECK WORD
+15. octopus= sqibk̓ʷ; image from pixabay;
+16. raspberry = q̓ʷələstab; image from pexels (extra - too confusing with generic berries);
+
 
 House - audio clip
 *****
@@ -26,4 +26,4 @@ House - audio clip
 2. chair - audio clip; got a picture
 3. table - audio clip; found a picture, but maybe keep looking
 4. phone - audio clip; got a picture
-5. window - audio clip; got a picturre
+5. window - audio clip; got a picture
