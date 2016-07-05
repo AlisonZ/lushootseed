@@ -25,7 +25,7 @@ function Flashcard(eng, lush, url, idNum, sound, phonetic) {
 
 //make Flashcard objects here.  For now these are test objects
 function makeFlashcards() {
-  new Flashcard('carrot','\u0161\u0259g\u02B7aq', 'image/wordphotos/carrots_basket.jpeg', 1, 0, 0);
+  new Flashcard('carrot','\u0161\u0259g\u02B7aq', 'image/wordphotos/carrots.jpeg', 1, 0, 0);
   new Flashcard('salmon','s\u0294uladx\u02B7', 'image/wordphotos/salmon.jpg', 2, 0, 0);
   new Flashcard('oyster', '\u019B\u0315ux\u030C\u02B7\u019B\u0315ux\u030C\u02B7', 'image/wordphotos/oyster.jpeg', 3, 0, 0);
   new Flashcard('coffee', 'kupi', 'image/wordphotos/coffee.jpg', 4, 0, 0);
@@ -33,7 +33,7 @@ function makeFlashcards() {
   new Flashcard('soup','s\u026Cub', 'image/wordphotos/soup.jpg', 6, 0, 0);
   new Flashcard('eggs','\u0294\u0259\u0294us', 'image/wordphotos/eggs.jpg', 7, 0, 0);
   new Flashcard('clam', 's\u0294ax\u030C\u02B7u\u0294','image/wordphotos/clam.jpeg', 8, 0, 0);
-  new Flashcard('mussels','tulq\u02B7', 'image/wordphotos/mussels.jpg', 9, 0, 0);
+  new Flashcard('mussels','tulq\u02B7', 'image/wordphotos/mussels.jpeg', 9, 0, 0);
   new Flashcard('crab','b\u0259sq\u02B7', 'image/wordphotos/crab.jpg', 10, 0, 0);
   new Flashcard('geoduck', 'g\u02B7id\u0259q','image/wordphotos/geoduck.jpg', 11, 0, 0);
   new Flashcard('potatoes', 'spiq\u02B7uc','image/wordphotos/potatoes.jpg', 12, 0, 0);
