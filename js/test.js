@@ -1,9 +1,10 @@
 'use strict';
+
 //to count how many picture has shown
-var counter = 0;
+// var counter = 0;
 //to hide the header until git first write answer
-document.getElementById('englishHeader').style.visibility = 'hidden';
-document.getElementById('lashooHeader').style.visibility = 'hidden';
+// document.getElementById('englishHeader').style.visibility = 'hidden';
+// document.getElementById('lashooHeader').style.visibility = 'hidden';
 //get the objects from local storage
 var eWord = JSON.parse(localStorage.getItem('arrayOfFlashcards'));
 console.log(eWord);
@@ -11,11 +12,17 @@ console.log('length',eWord.length);
 var words = [];
 var matching1Array = [];
 var matching2Array = [];
-for(var i = 0 ; i < eWord.length ; i ++) {
-  if(JSON.parse(localStorage.getItem('arrayOfFlashcards'))[i].shown) {
-    counter++;
-  }
-}
+
+var matchingLeft = document.getElementById('matching_left');
+var matchingRight = document.getElementById('matching_right');
+var correctLeft = document.getElementById('correct_left');
+var correctRight = document.getElementById('correct_right');
+
+// for(var i = 0 ; i < eWord.length ; i ++) {
+//   if(JSON.parse(localStorage.getItem('arrayOfFlashcards'))[i].shown) {
+//     counter++;
+//   }
+// }
 
 function processLocalStorage() {
   for(var i = 0; i < eWord.length; i++) {
@@ -30,21 +37,63 @@ var randomNumber = function(maxLength) {
 };
 
 function selectMatching1Array() {
-  var rand = randomNumber(words.length);
-  if(words[rand].timesShown !== 0) {
-    words[rand].timesShown = 0;
-    matching1Array.push(words[rand]);
+  while(matching1Array.length < 5) {
+    var rand = randomNumber(words.length);
+    if(words[rand].timesShown !== 0) {
+      words[rand].timesShown = 0;
+      matching1Array.push(words[rand]);
+    }
+    console.table(matching1Array);
   }
-  //needs duplicate filter
-  console.table(matching1Array);
 }
 
 function selectMatching2Array() {
-  var rand = randomNumber(matching1Array.length);
-  matching2Array.push(matching1Array[rand]);
-  //needs duplicate filter
-  console.table(matching2Array);
+  while(matching2Array.length < matching1Array.length) {
+    var rand = randomNumber(matching1Array.length);
+    if(matching1Array[rand].timesShown === 0) {
+      matching1Array[rand].timesShown = 1;
+      matching2Array.push(matching1Array[rand]);
+      console.table(matching2Array);
+    }
+  }
 }
+
+function liBuilder(content, destination, classy) {
+  var placeholder = document.createElement('li');
+  placeholder.textContent = content;
+  if(classy) {
+    placeholder.className = classy;
+  }
+  destination.appendChild(placeholder);
+}
+
+function buildMatchingLeft() {
+  for(var i = 0; i < words.length; i++) {
+    liBuilder(matching1Array[i].english, matchingLeft, 'not_selected_yet');
+  }
+}
+
+function buildMatchingRight() {
+  for(var i = 0; i < matching1Array.length; i++) {
+    liBuilder(matching2Array[i].lushootseed, matchingRight, 'not_selected_yet');
+  }
+}
+
+//call some functions
+processLocalStorage();
+selectMatching1Array();
+selectMatching2Array();
+// buildMatchingLeft();
+// buildMatchingRight();
+
+// function elementBuilder(type, content, destination, classy) {
+//   var placeholder = document.createElement(type);
+//   placeholder.textContent = content;
+//   if(classy) {
+//     placeholder.className = classy;
+//   }
+//   destination.appendChild(placeholder);
+// }
 
 // //English Words
 // var eWord1 = JSON.parse(localStorage.getItem('arrayOfFlashcards'))[0].english;

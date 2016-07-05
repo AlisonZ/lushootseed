@@ -1,8 +1,5 @@
 
-Derek is a complex, multi-faceted
-
-
-
+Derek is a complicated individual with simple tastes.  He enjoys some Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
 Derek's notes on this project
@@ -17,3 +14,10 @@ if(match) {
     "custom code to move the lis to the bottom uls and attach them there"
   }, 1000ms);
 }
+
+
+Branches:
+
+derek2 - work on tuesday 5 july
+
+derek1 - work on friday 1 july and over the weekend

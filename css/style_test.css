@@ -40,3 +40,7 @@ p {
   /* margin-top: 32px; */
   font-size: 32px;
 }
+
+.not_selected_yet {
+  /*style for elements that haven't been selected yet*/
+}
