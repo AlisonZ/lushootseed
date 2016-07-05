@@ -23,10 +23,21 @@ function Flashcard(eng, lush, url, idNum, sound, phonetic) {
 
 //make Flashcard objects here.  For now these are test objects
 function makeFlashcards() {
-  new Flashcard('englishtranslation1', 'lushootseed translation1', 'image/tester_images/coffee_test1.jpg', 1, 0, 0);
-  new Flashcard('englishtranslation2', 'lushootseed translation2', 'image/tester_images/door_window.jpeg', 2, 0, 0);
-  new Flashcard('englishtranslation3', 'lushootseed translation3', 'image/tester_images/pexels-photo-96469.jpeg', 3, 0, 0);
+  new Flashcard('šəgʷaq', 'carrot', 'image/wordphotos/carrots_basket.jpeg', 1, 0, 0);
+  new Flashcard('sʔuladxʷ', 'salmon', 'image/wordphotos/salmon.jpg', 2, 0, 0);
+  new Flashcard('ƛ̕ux̌ʷƛ̕ux̌ʷ', 'oyster', 'image/wordphotos/oyster.jpeg', 3, 0, 0);
+  new Flashcard('kupi', 'coffee', 'image/wordphotos/coffee.jpg', 4, 0, 0);
+  new Flashcard('sq̓ʷəlaɬəd', 'berry/fruit', 'image/wordphotos/berries.jpeg', 5, 0, 0);
+  new Flashcard('sɬub', 'soup', 'image/wordphotos/soup.jpg', 6, 0, 0);
+  new Flashcard('ʔəʔus', 'eggs', 'image/wordphotos/pexels-photo-96469.jpeg', 7, 0, 0);
+  new Flashcard('sʔax̌ʷuʔ', 'clam', 'image/wordphotos/clam.jpeg', 8, 0, 0);
+  new Flashcard('tulqʷ', 'mussels', 'image/wordphotos/mussels.jpg', 9, 0, 0);
+  new Flashcard('bəsqʷ', 'crab', 'image/wordphotos/crab.jpg', 10, 0, 0);
+  new Flashcard('gʷidəq', 'geoduck', 'image/wordphotos/geoduck.jpg', 11, 0, 0);
+  new Flashcard('spiqʷuc', 'potatoes', 'image/wordphotos/potatoes.jpg', 12, 0, 0);
+  new Flashcard('sqibk̓ʷ', 'octopus', 'image/wordphotos/octopus.jpg', 13, 0, 0);
 }
+
 
 //randomly select Flashcard by id # for display to the user, display it, and change it's shown property to True, and save array to local storage
 var generateRandomNumber = function() {
