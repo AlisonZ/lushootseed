@@ -21,7 +21,7 @@ var showTheRightWords = document.getElementById('result');
 var randomNumber = function() {
   return Math.floor(Math.random() * english.length);
 };
-//build Table when git first write answer
+//build Table when you get the first write answer
 var buildTable = function(x,y) {
   var trEl1 = document.createElement('tr');
   var tdEl2 = document.createElement('td');
@@ -32,10 +32,11 @@ var buildTable = function(x,y) {
   trEl1.appendChild(tdEl3);
   showTheRightWords.appendChild(trEl1);
 };
-//When press the button should check if you made the wirte answer
+//When press the button should check if you made the Right answer
 function newfunction() {
   if((document.getElementById('englisLabelId1').checked) && (document.getElementById('lushootseedLabelId1').checked)) {
-    scors++; console.log('scors',scors);
+    scors++;
+    //console.log('scors',scors);
     document.getElementById('scors').innerHTML = scors;
     document.getElementById('englishHeader').style.visibility = 'visible';
     document.getElementById('lashooHeader').style.visibility = 'visible';
@@ -76,9 +77,11 @@ function newfunction() {
     document.getElementById('lushootseedLabelId3').checked = false;
   }
 };
-//To make Radio Button
+//To hold the english Radio Button
 var english_home = document.getElementById('english_radio');
+//To hold the lushootseed radio Button
 var lushootseed_home = document.getElementById('lushootseed_radio');
+//function to make a radio Button
 function makeRadioButton(name, value, text,labelName) {
   var label = document.createElement('label');
   var radio = document.createElement('input');
@@ -89,20 +92,16 @@ function makeRadioButton(name, value, text,labelName) {
   label.setAttribute('for',labelName);
   label.for = labelName;
   label.id = text;
-  //radio.appendChild(label);
   label.appendChild(radio);
-//  radio.appendChild(label);
   label.appendChild(document.createTextNode(text));
   return label;
 };
-
+//yp ,make the order random
 var renderRadio = function() {
   var one = randomNumber();
   console.log('one',one);
   var two = randomNumber();
-  //console.log('two',two);
   var three = randomNumber();
-  //console.log('three', three);
   while(one === two) {
     two = randomNumber();
     console.log('two2',two);
@@ -114,10 +113,6 @@ var renderRadio = function() {
   english_home.appendChild(english[one]);
   english_home.appendChild(english[two]);
   english_home.appendChild(english[three]);
-  if(english[0].checked){
-    alert('thankssssssss');
-    myfunction();
-  }
   var one = randomNumber();
   console.log('one',one);
   var two = randomNumber();
@@ -135,20 +130,5 @@ var renderRadio = function() {
   lushootseed_home.appendChild(lushootseed[one]);
   lushootseed_home.appendChild(lushootseed[two]);
   lushootseed_home.appendChild(lushootseed[three]);
-
 };
 renderRadio();
-
-// lushootseed[0].checked = myfunction();
-english_radio.addEventListener('checked',function(){
-  alert('english');
-  if(english[0].checked) {
-    alert('lushootseed0');
-  }
-  if(english[1].checked) {
-    alert('lushootseed1');
-  }
-  if(english[2].checked) {
-    alert('thanss');
-  }
-});
