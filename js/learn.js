@@ -23,19 +23,19 @@ function Flashcard(eng, lush, url, idNum, sound, phonetic) {
 
 //make Flashcard objects here.  For now these are test objects
 function makeFlashcards() {
-  new Flashcard('šəgʷaq', 'carrot', 'image/wordphotos/carrots_basket.jpeg', 1, 0, 0);
-  new Flashcard('sʔuladxʷ', 'salmon', 'image/wordphotos/salmon.jpg', 2, 0, 0);
-  new Flashcard('ƛ̕ux̌ʷƛ̕ux̌ʷ', 'oyster', 'image/wordphotos/oyster.jpeg', 3, 0, 0);
-  new Flashcard('kupi', 'coffee', 'image/wordphotos/coffee.jpg', 4, 0, 0);
-  new Flashcard('sq̓ʷəlaɬəd', 'berry/fruit', 'image/wordphotos/berries.jpeg', 5, 0, 0);
-  new Flashcard('sɬub', 'soup', 'image/wordphotos/soup.jpg', 6, 0, 0);
-  new Flashcard('ʔəʔus', 'eggs', 'image/wordphotos/pexels-photo-96469.jpeg', 7, 0, 0);
-  new Flashcard('sʔax̌ʷuʔ', 'clam', 'image/wordphotos/clam.jpeg', 8, 0, 0);
-  new Flashcard('tulqʷ', 'mussels', 'image/wordphotos/mussels.jpg', 9, 0, 0);
-  new Flashcard('bəsqʷ', 'crab', 'image/wordphotos/crab.jpg', 10, 0, 0);
-  new Flashcard('gʷidəq', 'geoduck', 'image/wordphotos/geoduck.jpg', 11, 0, 0);
-  new Flashcard('spiqʷuc', 'potatoes', 'image/wordphotos/potatoes.jpg', 12, 0, 0);
-  new Flashcard('sqibk̓ʷ', 'octopus', 'image/wordphotos/octopus.jpg', 13, 0, 0);
+  new Flashcard('carrot','\u0161\u0259g\u02B7aq', 'image/wordphotos/carrots_basket.jpeg', 1, 0, 0);
+  new Flashcard('salmon','s\u0294uladx\u02B7', 'image/wordphotos/salmon.jpg', 2, 0, 0);
+  new Flashcard('oyster', '\u019B\u0315ux\u030C\u02B7\u019B\u0315ux\u030C\u02B7', 'image/wordphotos/oyster.jpeg', 3, 0, 0);
+  new Flashcard('coffee', 'kupi', 'image/wordphotos/coffee.jpg', 4, 0, 0);
+  new Flashcard( 'berry/fruit','sq\u0313\u02B7\u0259la\u026C\u0259d', 'image/wordphotos/berries.jpeg', 5, 0, 0);
+  new Flashcard('soup','s\u026Cub', 'soup', 'image/wordphotos/soup.jpg', 6, 0, 0);
+  new Flashcard('eggs','\u0294\u0259\u0294us', 'image/wordphotos/eggs.jpg', 7, 0, 0);
+  new Flashcard('clam', 's\u0294ax\u030C\u02B7u\u0294','image/wordphotos/clam.jpeg', 8, 0, 0);
+  new Flashcard('mussels','tulq\u02B7', 'image/wordphotos/mussels.jpg', 9, 0, 0);
+  new Flashcard('crab','b\u0259sq\u02B7', 'image/wordphotos/crab.jpg', 10, 0, 0);
+  new Flashcard('geoduck', 'g\u02B7id\u0259q','image/wordphotos/geoduck.jpg', 11, 0, 0);
+  new Flashcard('potatoes', 'spiq\u02B7uc','image/wordphotos/potatoes.jpg', 12, 0, 0);
+  new Flashcard('octopus', 'sqibk\u0313\u02B7', 'image/wordphotos/octopus.jpg', 13, 0, 0);
 }
 
 
