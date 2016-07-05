@@ -1,12 +1,12 @@
 'use strict';
-var englishItemSelected = [];
-var lashooItemSelected = [];
-englishItemSelected[0] = document.getElementById('english1');
-englishItemSelected[1] = document.getElementById('english2');
-englishItemSelected[2] = document.getElementById('english3');
-lashooItemSelected[0] = document.getElementById('lashoo1');
-lashooItemSelected[1] = document.getElementById('lashoo2');
-lashooItemSelected[2] = document.getElementById('lashoo3');
+// var englishItemSelected = [];
+// var lashooItemSelected = [];
+// englishItemSelected[0] = document.getElementById('english1');
+// englishItemSelected[1] = document.getElementById('english2');
+// englishItemSelected[2] = document.getElementById('english3');
+// lashooItemSelected[0] = document.getElementById('lashoo1');
+// lashooItemSelected[1] = document.getElementById('lashoo2');
+// lashooItemSelected[2] = document.getElementById('lashoo3');
 // var checkMatchItems = document.getElementById('itemSelected');
 document.getElementById('englishHeader').style.visibility = 'hidden';
 document.getElementById('lashooHeader').style.visibility = 'hidden';
@@ -27,7 +27,7 @@ var j = 0;
 var showTheRightWords = document.getElementById('result');
 //random Number to select radio
 var randomNumber = function() {
-  return Math.floor(Math.random() * englishItemSelected.length);
+  return Math.floor(Math.random() * english.length);
 };
 
 var buildTable = function(x,y) {
