@@ -59,6 +59,7 @@ h1 {
   background-color: #ac0400;
   border-radius: 3px;
   padding: 2px 10px;
+  cursor: pointer;
 }
 
 
@@ -67,6 +68,18 @@ main {
   height: 580px;
   width: 960px;
   margin: 0px auto;
+}
+
+button {
+  border: none;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.5em;
+  color: #eee;
+  margin: 10px 30px;
+  border-radius: 3px;
+  padding: 2px 10px;
+  background-color: #111b35;
+  cursor: pointer;
 }
 
 /*footer styling*/

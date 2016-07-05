@@ -1,46 +1,42 @@
-body{
-  width:960px;
-}
 
 #english_radio{
   padding: 100px;
-      float: left;
-      width: 153px;
-      display: block;
+  float: left;
+  width: 153px;
+  display: block;
 
 }
 #lushootseed_radio {
   width: 184px;
-    float: right;
-    padding: 100px;
+  float: right;
+  padding: 100px;
 
 }
 
 input[type="submit"] {
-    border: none;
-    padding: 31px 140px;
-    border-radius: 3px;
-    color: #fff;
-    background: #444;
-    transition: 750ms all;
-    cursor: pointer;
-    margin-top: -24px;
-    margin-left: 162px;
+  border: none;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.5em;
+  color: #eee;
+  background-color: #111b35;
+  border-radius: 3px;
+  padding: 2px 10px;
+  cursor: pointer;
+  /*color: #fff;*/
+  /*background: #444;*/
+  /*transition: 750ms all;*/
+  /*margin-top: -24px;*/
+  /*margin-left: 162px;*/
 }
 
 input[type="submit"]:hover {
   background: #888;
 }
-p{
-      font-size: 24px;
-      padding: 30px;
-    margin-left: 186px;
-    /* margin-top: 32px; */
-    font-size: 32px;
+
+p {
+  font-size: 24px;
+  padding: 30px;
+  margin-left: 186px;
+  /* margin-top: 32px; */
+  font-size: 32px;
 }
-/*#scors {
-  display:'none';
-  width:20px;
-  background-color: red;
-  color:white;
-}*/

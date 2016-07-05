@@ -3,11 +3,25 @@ blue : #111b35;
 red : #ac0400;
 Basic Font color : #444;
 
+button styling:
+
+button {
+  border: none;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.5em;
+  color: #eee;
+  margin: 10px 30px;
+  border-radius: 3px;
+  padding: 2px 10px;
+  background-color: #111b35;
+  cursor: pointer;
+}
+
 Flash-card font:
 Lucinda Grande
 font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 
-h1 font:
+h1/h2 font:
 Rock Salt by Sideshow https://fonts.google.com/specimen/Rock+Salt?category=Handwriting&query=rock
 <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
 font-family: 'Rock Salt', cursive;
