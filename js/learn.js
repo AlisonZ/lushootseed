@@ -7,6 +7,7 @@ var liElEng = document.getElementById('english_translation');
 var liElLus = document.getElementById('lushootseed_translation');
 var buttonNextFlashcard = document.getElementById('next_flashcard');
 var buttonTakeTest = document.getElementById('take_test');
+var timesAllShown = 0;
 
 buttonNextFlashcard.addEventListener('click', displayFlashcard);
 
@@ -18,6 +19,7 @@ function Flashcard(eng, lush, url, idNum, sound, phonetic) {
   this.sound = sound;
   this.phonetic = phonetic;
   this.shown = false;
+  this.timesShown = 0;
   arrayOfFlashcards.push(this);
 }
 
@@ -44,15 +46,34 @@ var generateRandomNumber = function() {
   return Math.floor(Math.random() * (arrayOfFlashcards.length));
 };
 
-function displayFlashcard() {
+function delimitRandom(){
   var placeholder = generateRandomNumber();
+  while(arrayOfFlashcards[placeholder].timesShown >= timesAllShown){
+    delimitRandom();
+  }
+  return placeholder;
+}
+
+
+function displayFlashcard() {
+  limitDuplicates();
+  var placeholder = delimitRandom();
   arrayOfFlashcards[placeholder].shown = true;
   imgEl.src = arrayOfFlashcards[placeholder].pictureurl;
   liElEng.textContent = arrayOfFlashcards[placeholder].english;
   liElLus.textContent = arrayOfFlashcards[placeholder].lushootseed;
   numFlashcardsShown++;
+  arrayOfFlashcards[placeholder].timesShown++;
+  console.log('times shown incremented', arrayOfFlashcards[placeholder].timesShown);
   localStorage.setItem('arrayOfFlashcards', JSON.stringify(arrayOfFlashcards));
   showTestButton();
+}
+
+function limitDuplicates(){
+  if (numFlashcardsShown = arrayOfFlashcards.length){
+    timesAllShown++;
+    numFlashcardsShown = 0;
+  }
 }
 
 function showTestButton() {
