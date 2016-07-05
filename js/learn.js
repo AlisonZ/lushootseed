@@ -28,7 +28,7 @@ function makeFlashcards() {
   new Flashcard('oyster', '\u019B\u0315ux\u030C\u02B7\u019B\u0315ux\u030C\u02B7', 'image/wordphotos/oyster.jpeg', 3, 0, 0);
   new Flashcard('coffee', 'kupi', 'image/wordphotos/coffee.jpg', 4, 0, 0);
   new Flashcard( 'berry/fruit','sq\u0313\u02B7\u0259la\u026C\u0259d', 'image/wordphotos/berries.jpeg', 5, 0, 0);
-  new Flashcard('soup','s\u026Cub', 'soup', 'image/wordphotos/soup.jpg', 6, 0, 0);
+  new Flashcard('soup','s\u026Cub', 'image/wordphotos/soup.jpg', 6, 0, 0);
   new Flashcard('eggs','\u0294\u0259\u0294us', 'image/wordphotos/eggs.jpg', 7, 0, 0);
   new Flashcard('clam', 's\u0294ax\u030C\u02B7u\u0294','image/wordphotos/clam.jpeg', 8, 0, 0);
   new Flashcard('mussels','tulq\u02B7', 'image/wordphotos/mussels.jpg', 9, 0, 0);
