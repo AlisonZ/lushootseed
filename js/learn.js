@@ -48,8 +48,8 @@ var generateRandomNumber = function() {
 
 function delimitRandom(){
   var placeholder = generateRandomNumber();
-  while(arrayOfFlashcards[placeholder].timesShown >= timesAllShown){
-    delimitRandom();
+  while(arrayOfFlashcards[placeholder].timesShown > timesAllShown){
+    placeholder = generateRandomNumber();
   }
   return placeholder;
 }
@@ -70,7 +70,7 @@ function displayFlashcard() {
 }
 
 function limitDuplicates(){
-  if (numFlashcardsShown = arrayOfFlashcards.length){
+  if (numFlashcardsShown === arrayOfFlashcards.length){
     timesAllShown++;
     numFlashcardsShown = 0;
   }
