@@ -68,14 +68,14 @@ function liBuilder(content, destination, classy) {
 }
 
 function buildMatchingLeft() {
-  for(var i = 0; i < words.length; i++) {
-    liBuilder(matching1Array[i].english, matchingLeft, 'not_selected_yet');
+  for(var i = 0; i < matching1Array.length; i++) {
+    liBuilder(matching1Array[i].english, matchingLeft, 'not_selected');
   }
 }
 
 function buildMatchingRight() {
   for(var i = 0; i < matching1Array.length; i++) {
-    liBuilder(matching2Array[i].lushootseed, matchingRight, 'not_selected_yet');
+    liBuilder(matching2Array[i].lushootseed, matchingRight, 'not_selected');
   }
 }
 
@@ -83,8 +83,8 @@ function buildMatchingRight() {
 processLocalStorage();
 selectMatching1Array();
 selectMatching2Array();
-// buildMatchingLeft();
-// buildMatchingRight();
+buildMatchingLeft();
+buildMatchingRight();
 
 // function elementBuilder(type, content, destination, classy) {
 //   var placeholder = document.createElement(type);
