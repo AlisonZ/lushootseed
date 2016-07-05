@@ -41,6 +41,6 @@ p {
   font-size: 32px;
 }
 
-.not_selected_yet {
-  /*style for elements that haven't been selected yet*/
+.not_selected {
+  /*style for elements that haven't been selected*/
 }
