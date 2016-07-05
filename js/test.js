@@ -1,13 +1,5 @@
 'use strict';
-// var englishItemSelected = [];
-// var lashooItemSelected = [];
-// englishItemSelected[0] = document.getElementById('english1');
-// englishItemSelected[1] = document.getElementById('english2');
-// englishItemSelected[2] = document.getElementById('english3');
-// lashooItemSelected[0] = document.getElementById('lashoo1');
-// lashooItemSelected[1] = document.getElementById('lashoo2');
-// lashooItemSelected[2] = document.getElementById('lashoo3');
-// var checkMatchItems = document.getElementById('itemSelected');
+//to hide the header until git first write answer
 document.getElementById('englishHeader').style.visibility = 'hidden';
 document.getElementById('lashooHeader').style.visibility = 'hidden';
 //Score Counter
@@ -23,13 +15,13 @@ lushootseed[1] = makeRadioButton('lushootseed', 'lushootseedWord2', 'lushootseed
 lushootseed[2] = makeRadioButton('lushootseed', 'lushootseedWord3', 'lushootseedTextWord3','lushootseedLabelId3');
 var scors = 0;
 var j = 0;
-//This variblae for the table
+//Table holder
 var showTheRightWords = document.getElementById('result');
 //random Number to select radio
 var randomNumber = function() {
   return Math.floor(Math.random() * english.length);
 };
-
+//build Table when git first write answer
 var buildTable = function(x,y) {
   var trEl1 = document.createElement('tr');
   var tdEl2 = document.createElement('td');
@@ -40,6 +32,7 @@ var buildTable = function(x,y) {
   trEl1.appendChild(tdEl3);
   showTheRightWords.appendChild(trEl1);
 };
+//When press the button should check if you made the wirte answer
 function newfunction() {
   if((document.getElementById('englisLabelId1').checked) && (document.getElementById('lushootseedLabelId1').checked)) {
     scors++; console.log('scors',scors);
@@ -75,47 +68,14 @@ function newfunction() {
     buildTable((document.getElementById('englisLabelId3').value),(document.getElementById('lushootseedLabelId3').value));
   } else {
     alert('NO NO TRY AGAIN');
+    document.getElementById('englisLabelId1').checked = false;
+    document.getElementById('lushootseedLabelId1').checked = false;
+    document.getElementById('englisLabelId2').checked = false;
+    document.getElementById('lushootseedLabelId2').checked = false;
+    document.getElementById('englisLabelId3').checked = false;
+    document.getElementById('lushootseedLabelId3').checked = false;
   }
 };
-
-//   for (var i = 0; i < english.length; i++) {
-//     if (english[i].checked && lushootseed[i].checked) {
-//       scors++;
-//       alert('Gooooooooooood');
-//     //  english[i].style.visibility = 'hidden';
-//       lushootseed[i].style.visibility = 'hidden';
-//       document.getElementById('scors').innerHTML = scors;
-//       document.getElementById('englishHeader').style.visibility = 'visible';
-//       document.getElementById('lashooHeader').style.visibility = 'visible';
-//       //buildTable();
-//     }
-//   }
-// };
-
-// function myfunction() {
-//   alert('hiiiiiiiiiiiiii');
-//   for (var i = 0; i < englishItemSelected.length; i++) {
-//     if (englishItemSelected[i].checked && lashooItemSelected[i].checked) {
-//       scors++;
-//       alert('Gooooooooooood');
-//       englishItemSelected[i].style.visibility = 'hidden';
-//       lashooItemSelected[i].style.visibility = 'hidden';
-//       document.getElementById('scors').innerHTML = scors;
-//       document.getElementById('englishHeader').style.visibility = 'visible';
-//       document.getElementById('lashooHeader').style.visibility = 'visible';
-//       buildTable();
-//     } else {
-//       if(englishItemSelected[i].checked && !lashooItemSelected[i].checked)
-//       {
-//         alert('you have to chose the right answer!');
-//         englishItemSelected[i].checked = false;
-//         for(var k = 0 ; k < lashooItemSelected.length ; k ++ ) {
-//           lashooItemSelected[k].checked = false;
-//         }
-//       }
-//     }
-//   }
-// };
 //To make Radio Button
 var english_home = document.getElementById('english_radio');
 var lushootseed_home = document.getElementById('lushootseed_radio');
