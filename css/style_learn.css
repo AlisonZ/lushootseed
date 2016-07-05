@@ -6,3 +6,14 @@
 .show_take_test {
   display: block;
 }
+
+flashcard {
+  width: 900px;
+  height: 400px;
+  background-color: #fff;
+}
+
+#picture_tag {
+  width: 50%;
+  margin: 20px;
+}
