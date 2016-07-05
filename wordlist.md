@@ -2,11 +2,11 @@ Wordlist
 ====
 Food - audio clip
 ****
-1. water - Zeke Youtube min 1:43; pexels
-2. carrot= šəgʷaq;image from pexels;
+1. water - Zeke Youtube min 1:43; pexels; NOT INCLUDED IN LIST
+2. carrot = šəgʷaq;image from pexels;
 3. salmon = sʔuladxʷ; image from pixabay;
 4. oyster = ƛ̕ux̌ʷƛ̕ux̌ʷ; image from unsplash;
-5. candy =sʔəɬəd; - image from pixabay ; DOUBLE-CHECK word
+5. candy =sʔəɬəd; - image from pixabay ; DOUBLE-CHECK word; NOT INCLUDED IN LIST
 6. coffee = kupi;- image from pexels;
 7. berry/fruit = sq̓ʷəlaɬəd; image from unsplash;
 8. soup =sɬub;-image from pexels;
@@ -17,7 +17,7 @@ Food - audio clip
 13. geoduck = gʷidəq; image from pixabay, maybe look for another;
 14. potatoes = spiqʷuc; image from pixabay; DOUBLE CHECK WORD
 15. octopus= sqibk̓ʷ; image from pixabay;
-16. raspberry = q̓ʷələstab; image from pexels (extra - too confusing with generic berries);
+16. raspberry = q̓ʷələstab; image from pexels (extra - too confusing with generic berries); NOT INCLUDED IN LIST
 
 
 House - audio clip
