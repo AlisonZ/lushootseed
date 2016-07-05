@@ -83,6 +83,40 @@ function buildMatchingRight() {
   }
 }
 
+matchingLeft.addEventListener('click', function(event) {
+  //change class of selected li to .selected
+  //don't allow more than 1 element to be selected at once
+  //check if elemnt from matchingRight is selected, if so compare
+  //if correct, call correct function
+  //if incorrect, call incorrect function
+});
+
+matchingRight.addEventListener('click', function(event) {
+  //change class of selected li to .selected
+  //basically the same as above
+});
+
+function correctAnswer() {
+  //this will move correct answers to the bottom lists and increase score by 1
+}
+
+function wrongAnswer() {
+  //wrong answers will flash red then remove .wrong class and allow user to select again
+}
+
+// addStoreForm.addEventListener('submit', function(event) {
+//   event.preventDefault();
+//   var minCustPerHour = parseInt(document.getElementById('min_cust_per_hour').value),
+//     maxCustPerHour = parseInt(document.getElementById('max_cust_per_hour').value),
+//     avgCookiesPerCust = parseFloat(document.getElementById('avg_cookies_per_hour').value),
+//     storeName = document.getElementById('shop_location').value;
+//   new CookieStore(minCustPerHour, maxCustPerHour, avgCookiesPerCust, storeName);
+//   tableEl.textContent = '';
+//   makeTableHeader();
+//   renderCookieStores();
+//   makeTableFooter();
+// });
+
 //call some functions
 processLocalStorage();
 selectMatching1Array();
