@@ -1,3 +1,6 @@
+li {
+  display: inline-block;
+}
 
 .take_test {
   display: none;
@@ -7,13 +10,24 @@
   display: block;
 }
 
-flashcard {
+#flashcard {
   width: 900px;
   height: 400px;
-  background-color: #fff;
+  margin: 20px auto;
+  background-color: #eee;
+  border-radius: 10px;
+}
+
+#picture_div {
+  display: inline;
+  width: 50%;
+  margin: 20px;
 }
 
 #picture_tag {
-  width: 50%;
-  margin: 20px;
+  width: 100%;
+}
+
+#translations {
+  display: inline;
 }
