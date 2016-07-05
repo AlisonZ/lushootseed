@@ -13,9 +13,12 @@ a {
 
 /*header styling*/
 header {
-  width: 100%;
+  width: 960px;
   height: 113px;
-  border-bottom: 5px solid #111b35;
+  margin: 0px auto;
+  border: solid #111b35;
+  border-width: 0px 5px 5px 5px;
+  border-radius: 0px 0px 10px 10px;
   overflow: hidden;
   min-width: 600px;
 }
@@ -30,7 +33,7 @@ header img {
 h1 {
   position: absolute;
   top: 5px;
-  left: 20px;
+  margin-left: 30px;
   font-family: 'Rock Salt', cursive;
   font-size: 2.5em;
   color: #eee;
@@ -39,9 +42,12 @@ h1 {
   padding: 10px 20px;
 }
 
+#nav {
+  position: absolute;
+  top: 78px;
+}
+
 #nav li {
-  position: relative;
-  bottom: 61px;
   display: inline;
   margin-left: 45px;
 }
@@ -65,10 +71,13 @@ main {
 
 /*footer styling*/
 footer {
-  width: 100%;
+  width: 960px;
   height: 20px;
+  margin: 0px auto;
   overflow: hidden;
-  border-top: 5px solid #111b35;
+  border: solid #111b35;
+  border-width: 5px 5px 0px 5px;
+  border-radius: 10px 10px 0px 0px;
 }
 
 footer img {
