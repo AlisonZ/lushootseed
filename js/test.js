@@ -2,17 +2,27 @@
 //to hide the header until git first write answer
 document.getElementById('englishHeader').style.visibility = 'hidden';
 document.getElementById('lashooHeader').style.visibility = 'hidden';
-//Score Counter
+//get the info from local storage
+var eWord = JSON.parse(localStorage.getItem('arrayOfFlashcards'));
+console.log(eWord);
+var eWord1 = JSON.parse(localStorage.getItem('arrayOfFlashcards'))[0].english;
+console.log('local Storage',eWord1);
+var eWord2 = JSON.parse(localStorage.getItem('arrayOfFlashcards'))[1].english;
+var eWord3 = JSON.parse(localStorage.getItem('arrayOfFlashcards'))[2].english;
+//lushootseed words
+var lWord1 = JSON.parse(localStorage.getItem('arrayOfFlashcards'))[0].lushootseed;
+var lWord2 = JSON.parse(localStorage.getItem('arrayOfFlashcards'))[1].lushootseed;
+var lWord3 = JSON.parse(localStorage.getItem('arrayOfFlashcards'))[2].lushootseed;
 //English words************
 var english = [];
-english[0] = makeRadioButton('english', 'englishWord1', 'englishTextWord1','englisLabelId1');
-english[1] = makeRadioButton('english', 'englishWord2', 'englishTextWord2','englisLabelId2');
-english[2] = makeRadioButton('english', 'englishWord3', 'englishTextWord3','englisLabelId3');
+english[0] = makeRadioButton('english', 'englishWord1', eWord1,'englisLabelId1');
+english[1] = makeRadioButton('english', 'englishWord2', eWord2,'englisLabelId2');
+english[2] = makeRadioButton('english', 'englishWord3', eWord3,'englisLabelId3');
 //Lushootseed words**************
 var lushootseed = [];
-lushootseed[0] = makeRadioButton('lushootseed', 'lushootseedWord1', 'lushootseedTextWord1','lushootseedLabelId1');
-lushootseed[1] = makeRadioButton('lushootseed', 'lushootseedWord2', 'lushootseedTextWord2','lushootseedLabelId2');
-lushootseed[2] = makeRadioButton('lushootseed', 'lushootseedWord3', 'lushootseedTextWord3','lushootseedLabelId3');
+lushootseed[0] = makeRadioButton('lushootseed', 'lushootseedWord1', lWord1,'lushootseedLabelId1');
+lushootseed[1] = makeRadioButton('lushootseed', 'lushootseedWord2', lWord2,'lushootseedLabelId2');
+lushootseed[2] = makeRadioButton('lushootseed', 'lushootseedWord3', lWord3,'lushootseedLabelId3');
 var scors = 0;
 var j = 0;
 //Table holder
@@ -42,8 +52,8 @@ function newfunction() {
     document.getElementById('lashooHeader').style.visibility = 'visible';
     document.getElementById('englisLabelId1').checked = false;
     document.getElementById('lushootseedLabelId1').checked = false;
-    document.getElementById('lushootseedTextWord1').style.display = 'none';
-    document.getElementById('englishTextWord1').style.display = 'none';
+    document.getElementById(lWord1).style.display = 'none';
+    document.getElementById(eWord1).style.display = 'none';
     buildTable((document.getElementById('englisLabelId1').value),(document.getElementById('lushootseedLabelId1').value));
   } else
     if((document.getElementById('englisLabelId2').checked) && (document.getElementById('lushootseedLabelId2').checked)) {
@@ -53,8 +63,8 @@ function newfunction() {
       document.getElementById('lashooHeader').style.visibility = 'visible';
       document.getElementById('englisLabelId2').checked = false;
       document.getElementById('lushootseedLabelId2').checked = false;
-      document.getElementById('lushootseedTextWord2').style.display = 'none';
-      document.getElementById('englishTextWord2').style.display = 'none';
+      document.getElementById(lWord2).style.display = 'none';
+      document.getElementById(eWord2).style.display = 'none';
       buildTable((document.getElementById('englisLabelId2').value),(document.getElementById('lushootseedLabelId2').value));
     } else
   if((document.getElementById('englisLabelId3').checked) && (document.getElementById('lushootseedLabelId3').checked)) {
@@ -64,8 +74,8 @@ function newfunction() {
     document.getElementById('lashooHeader').style.visibility = 'visible';
     document.getElementById('englisLabelId3').checked = false;
     document.getElementById('lushootseedLabelId3').checked = false;
-    document.getElementById('lushootseedTextWord3').style.display = 'none';
-    document.getElementById('englishTextWord3').style.display = 'none';
+    document.getElementById(lWord3).style.display = 'none';
+    document.getElementById(eWord3).style.display = 'none';
     buildTable((document.getElementById('englisLabelId3').value),(document.getElementById('lushootseedLabelId3').value));
   } else {
     alert('NO NO TRY AGAIN');
