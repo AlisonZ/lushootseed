@@ -12,22 +12,29 @@ li {
 
 #flashcard {
   width: 900px;
-  height: 400px;
+  height: 450px;
   margin: 20px auto;
-  background-color: #eee;
   border-radius: 10px;
+  background-color: #eee;
 }
 
 #picture_div {
   display: inline;
-  width: 50%;
-  margin: 20px;
 }
 
 #picture_tag {
-  width: 100%;
+  width: 500px;
+  margin-top: 50px;
+  margin-left: 50px;
 }
 
 #translations {
   display: inline;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  font-size: 2em;
+  color: #444;
+}
+
+#translations li {
+  display: inline-block;
 }
