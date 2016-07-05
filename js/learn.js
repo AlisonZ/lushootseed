@@ -39,8 +39,6 @@ function makeFlashcards() {
   new Flashcard('potatoes', 'spiq\u02B7uc','image/wordphotos/potatoes.jpg', 12, 0, 0);
   new Flashcard('octopus', 'sqibk\u0313\u02B7', 'image/wordphotos/octopus.jpg', 13, 0, 0);
 }
-
-
 //randomly select Flashcard by id # for display to the user, display it, and change it's shown property to True, and save array to local storage
 var generateRandomNumber = function() {
   return Math.floor(Math.random() * (arrayOfFlashcards.length));
