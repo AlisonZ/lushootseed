@@ -22,6 +22,7 @@ derek2 - work on tuesday 5 july
 
 derek1 - work on friday 1 july and over the weekend
 
+<!-- added by liz -->
 <script>
   document.getElementById('where you want it moved').appendChild(
     document.getElementById('what you want moved')
