@@ -52,7 +52,6 @@ function delimitRandom(){
   return placeholder;
 }
 
-
 function displayFlashcard() {
   limitDuplicates();
   var placeholder = delimitRandom();

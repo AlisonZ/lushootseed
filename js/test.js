@@ -44,8 +44,8 @@ function selectMatching1Array() {
       words[rand].timesShown = 0;
       matching1Array.push(words[rand]);
     }
-    console.table(matching1Array);
   }
+  console.table(matching1Array);
 }
 
 function selectMatching2Array() {
@@ -54,55 +54,134 @@ function selectMatching2Array() {
     if(matching1Array[rand].timesShown === 0) {
       matching1Array[rand].timesShown = 1;
       matching2Array.push(matching1Array[rand]);
-      console.table(matching2Array);
     }
   }
+  console.table(matching2Array);
 }
 
-function liBuilder(content, destination, classy, idd) {
+function liBuilder(content, destination, classy, dataForMatch) {
   var placeholder = document.createElement('li');
   placeholder.textContent = content;
   if(classy) {
     placeholder.className = classy;
   }
-  if(idd) {
-    placeholder.id = idd;
+  if(dataForMatch) {
+    placeholder.dataset.match = dataForMatch;
   }
   destination.appendChild(placeholder);
 }
 
 function buildMatchingLeft() {
   for(var i = 0; i < matching1Array.length; i++) {
-    liBuilder(matching1Array[i].english, matchingLeft, 'not_selected ' + matching1Array[i].idNum + '');
+    liBuilder(matching1Array[i].english, matchingLeft, 'not_selected', matching1Array[i].idNum);
   }
 }
 
 function buildMatchingRight() {
   for(var i = 0; i < matching1Array.length; i++) {
-    liBuilder(matching2Array[i].lushootseed, matchingRight, 'not_selected ' + matching2Array[i].idNum + '');
+    liBuilder(matching2Array[i].lushootseed, matchingRight, 'not_selected', matching2Array[i].idNum);
   }
 }
 
 matchingLeft.addEventListener('click', function(event) {
-  //change class of selected li to .selected
-  //don't allow more than 1 element to be selected at once
-  //check if elemnt from matchingRight is selected, if so compare
-  //if correct, call correct function
-  //if incorrect, call incorrect function
+  var matchingLeftNodes = document.getElementById('matching_left').childNodes;
+  var matchingRightNodes = document.getElementById('matching_right').childNodes;
+  for(var i = 0; i < matchingLeftNodes.length; i++) {
+    if(matchingLeftNodes[i].classList.contains('selected')) {
+      matchingLeftNodes[i].classList.remove('selected');
+      matchingLeftNodes[i].classList.add('not_selected');
+    }
+  }
+  event.target.classList.remove('not_selected');
+  event.target.classList.add('selected');
+  var bool = true;
+  for(var i = 0; i < matchingRightNodes.length; i++) {
+    if(matchingRightNodes[i].dataset.match === event.target.dataset.match) {
+      if(matchingRightNodes[i].classList.contains('selected')) {
+        bool = false;
+        correctAnswer();
+        break;
+      }
+    }
+  }
+  if(bool) {
+    for(var i = 0; i < matchingRightNodes.length; i++) {
+      if(matchingRightNodes[i].classList.contains('selected')) {
+        wrongAnswer();
+      }
+    }
+  }
 });
 
 matchingRight.addEventListener('click', function(event) {
-  //change class of selected li to .selected
-  //basically the same as above
+  var matchingRightNodes = document.getElementById('matching_right').childNodes;
+  var matchingLeftNodes = document.getElementById('matching_left').childNodes;
+  for(var i = 0; i < matchingRightNodes.length; i++) {
+    if(matchingRightNodes[i].classList.contains('selected')) {
+      matchingRightNodes[i].classList.remove('selected');
+      matchingRightNodes[i].classList.add('not_selected');
+    }
+  }
+  event.target.classList.remove('not_selected');
+  event.target.classList.add('selected');
+  var bool = true;
+  for(var i = 0; i < matchingLeftNodes.length; i++) {
+    if(event.target.dataset.match === matchingLeftNodes[i].dataset.match) {
+      if(matchingLeftNodes[i].classList.contains('selected')) {
+        bool = false;
+        correctAnswer();
+        break;
+      }
+    }
+  }
+  if(bool) {
+    for(var i = 0; i < matchingLeftNodes.length; i++) {
+      if(matchingLeftNodes[i].classList.contains('selected')) {
+        wrongAnswer();
+      }
+    }
+  }
 });
 
 function correctAnswer() {
   //this will move correct answers to the bottom lists and increase score by 1
+  console.log('correct answer');
 }
 
 function wrongAnswer() {
-  //wrong answers will flash red then remove .wrong class and allow user to select again
+  var matchingRightNodes = document.getElementById('matching_right').childNodes;
+  var matchingLeftNodes = document.getElementById('matching_left').childNodes;
+  for(var i = 0; i < matchingLeftNodes.length; i++) {
+    if(matchingLeftNodes[i].classList.contains('selected')) {
+      var placeholderOne = matchingLeftNodes[i];
+    }
+  }
+  for(var i = 0; i < matchingRightNodes.length; i++) {
+    if(matchingRightNodes[i].classList.contains('selected')) {
+      var placeholderTwo = matchingRightNodes[i];
+    }
+  }
+  placeholderOne.classList.remove('selected');
+  placeholderOne.classList.add('wrong');
+  placeholderTwo.classList.remove('selected');
+  placeholderTwo.classList.add('wrong');
+  setTimeout(function() {
+    placeholderOne.classList.remove('wrong');
+    placeholderOne.classList.add('not_selected');
+    placeholderTwo.classList.remove('wrong');
+    placeholderTwo.classList.add('not_selected');
+  }, 500);
+  //apply class of wrong to selected elements in both lists, remove selected class, then remove wrong class
+  //wrong answers will flash red then remove .selected class and allow user to select again
+  console.log('wrong answer');
 }
+
+// if(match) {
+//   el.style.border = 'green' //using transition on parent element the border will fade in
+//   setTimeout(function() {
+//     "custom code to move the lis to the bottom uls and attach them there"
+//   }, 1000ms);
+// }
 
 // addStoreForm.addEventListener('submit', function(event) {
 //   event.preventDefault();
