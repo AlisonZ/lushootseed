@@ -23,7 +23,7 @@ function Flashcard(eng, lush, url, idNum, sound, phonetic) {
   arrayOfFlashcards.push(this);
 }
 
-//make Flashcard objects here.  For now these are test objects
+//make Flashcard objects here
 function makeFlashcards() {
   new Flashcard('carrot','\u0161\u0259g\u02B7aq', 'image/wordphotos/carrots.jpeg', 1, 0, 0);
   new Flashcard('salmon','s\u0294uladx\u02B7', 'image/wordphotos/salmon.jpg', 2, 0, 0);
