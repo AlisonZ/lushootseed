@@ -1,8 +1,4 @@
 
-* {
-  outline: 3px dashed blue;
-}
-
 #english_radio{
   padding: 100px;
   float: left;
@@ -44,7 +40,10 @@ p {
   /* margin-top: 32px; */
   font-size: 32px;
 }
-
+ul li {
+  padding: 15px;
+  margin: 5px;
+}
 #matching_left {
   padding: 20px;
   margin: 10px;
@@ -57,12 +56,18 @@ p {
 
 .not_selected {
   /*style for elements that haven't been selected*/
-  border: 3px solid red;
-  padding: 10px;
+  border: 3px solid black;
 }
 
 .selected {
   /*style for selected elements here*/
+  border: 3px solid blue;
+}
+
+.wrong {
+  border: 3px solid red;
+}
+
+.correct {
   border: 3px solid green;
-  padding: 10px;
 }

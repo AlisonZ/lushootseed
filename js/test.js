@@ -149,9 +149,39 @@ function correctAnswer() {
 }
 
 function wrongAnswer() {
-  //wrong answers will flash red then remove .wrong class and allow user to select again
+  var matchingRightNodes = document.getElementById('matching_right').childNodes;
+  var matchingLeftNodes = document.getElementById('matching_left').childNodes;
+  for(var i = 0; i < matchingLeftNodes.length; i++) {
+    if(matchingLeftNodes[i].classList.contains('selected')) {
+      var placeholderOne = matchingLeftNodes[i];
+    }
+  }
+  for(var i = 0; i < matchingRightNodes.length; i++) {
+    if(matchingRightNodes[i].classList.contains('selected')) {
+      var placeholderTwo = matchingRightNodes[i];
+    }
+  }
+  placeholderOne.classList.remove('selected');
+  placeholderOne.classList.add('wrong');
+  placeholderTwo.classList.remove('selected');
+  placeholderTwo.classList.add('wrong');
+  setTimeout(function() {
+    placeholderOne.classList.remove('wrong');
+    placeholderOne.classList.add('not_selected');
+    placeholderTwo.classList.remove('wrong');
+    placeholderTwo.classList.add('not_selected');
+  }, 500);
+  //apply class of wrong to selected elements in both lists, remove selected class, then remove wrong class
+  //wrong answers will flash red then remove .selected class and allow user to select again
   console.log('wrong answer');
 }
+
+// if(match) {
+//   el.style.border = 'green' //using transition on parent element the border will fade in
+//   setTimeout(function() {
+//     "custom code to move the lis to the bottom uls and attach them there"
+//   }, 1000ms);
+// }
 
 // addStoreForm.addEventListener('submit', function(event) {
 //   event.preventDefault();
