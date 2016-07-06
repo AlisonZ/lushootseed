@@ -6,8 +6,9 @@ li {
   width: 900px;
   height: 450px;
   margin: 20px auto;
+  border: 3px solid black;
   border-radius: 10px;
-  background-color: #eee;
+  background-color: #ac0400;
 }
 
 #picture_tag {
@@ -20,7 +21,7 @@ li {
   display: inline;
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
   font-size: 2em;
-  color: #444;
+  color: #eee;
 }
 
 .take_test {

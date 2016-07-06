@@ -3,9 +3,7 @@
 }
 
 body {
-  /*background-color:#ffd399;*/
-  width: 960px;
-  margin: 30px auto;
+  background-color:#eee;
 }
 
 a {
@@ -15,7 +13,6 @@ a {
 
 /*header styling*/
 header {
-  width: 960px;
   height: 150px;
   margin: 0px auto;
   border-bottom: 5px solid #111b35;
@@ -27,6 +24,7 @@ header {
 
 .header_inner{
   width: 960px;
+  margin: 30px auto;
 }
 
 header img {
@@ -149,9 +147,8 @@ li p{
 
 
 footer {
-  width: 960px;
-  height: 100px;
   margin: 0px auto;
+  height: 100px;
   overflow: hidden;
   border-top: 5px solid #111b35;
   /*border-width: 5px 5px 0px 5px;*/
