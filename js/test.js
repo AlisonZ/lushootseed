@@ -94,14 +94,22 @@ matchingLeft.addEventListener('click', function(event) {
   }
   event.target.classList.remove('not_selected');
   event.target.classList.add('selected');
+  var bool = true;
   for(var i = 0; i < matchingRightNodes.length; i++) {
     if(matchingRightNodes[i].dataset.match === event.target.dataset.match) {
       if(matchingRightNodes[i].classList.contains('selected')) {
+        bool = false;
         correctAnswer();
         break;
       }
     }
-    // wrongAnswer();
+  }
+  if(bool) {
+    for(var i = 0; i < matchingRightNodes.length; i++) {
+      if(matchingRightNodes[i].classList.contains('selected')) {
+        wrongAnswer();
+      }
+    }
   }
 });
 
@@ -116,14 +124,22 @@ matchingRight.addEventListener('click', function(event) {
   }
   event.target.classList.remove('not_selected');
   event.target.classList.add('selected');
+  var bool = true;
   for(var i = 0; i < matchingLeftNodes.length; i++) {
     if(event.target.dataset.match === matchingLeftNodes[i].dataset.match) {
       if(matchingLeftNodes[i].classList.contains('selected')) {
+        bool = false;
         correctAnswer();
         break;
       }
     }
-    // wrongAnswer();
+  }
+  if(bool) {
+    for(var i = 0; i < matchingLeftNodes.length; i++) {
+      if(matchingLeftNodes[i].classList.contains('selected')) {
+        wrongAnswer();
+      }
+    }
   }
 });
 
