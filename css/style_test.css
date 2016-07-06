@@ -1,4 +1,8 @@
 
+* {
+  outline: 3px dashed blue;
+}
+
 #english_radio{
   padding: 100px;
   float: left;
@@ -41,6 +45,24 @@ p {
   font-size: 32px;
 }
 
+#matching_left {
+  padding: 20px;
+  margin: 10px;
+}
+
+#matching_right {
+  padding: 20px;
+  margin: 10px;
+}
+
 .not_selected {
   /*style for elements that haven't been selected*/
+  border: 3px solid red;
+  padding: 10px;
+}
+
+.selected {
+  /*style for selected elements here*/
+  border: 3px solid green;
+  padding: 10px;
 }
