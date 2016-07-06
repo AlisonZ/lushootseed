@@ -1,12 +1,4 @@
 li {
-  display: inline-block;
-}
-
-.take_test {
-  display: none;
-}
-
-.show_take_test {
   display: block;
 }
 
@@ -18,14 +10,10 @@ li {
   background-color: #eee;
 }
 
-#picture_div {
-  display: inline;
-}
-
 #picture_tag {
   width: 500px;
-  margin-top: 75px;
-  margin-left: 50px;
+  margin: 75px 30px;
+  float:left;
 }
 
 #translations {
@@ -35,6 +23,10 @@ li {
   color: #444;
 }
 
-#translations li {
-  display: inline-block;
+.take_test {
+  display: none;
+}
+
+.show_take_test {
+  display: block;
 }
