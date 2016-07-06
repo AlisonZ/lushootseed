@@ -1,4 +1,5 @@
 'use strict';
+//NOTE TO SELF -- THIS PAGE WILL BREAK IF USER HAS NOT VISITED LEARN.HTML AND HAS 5 TRUES FIRST!!!!
 
 //to count how many picture has shown
 // var counter = 0;
@@ -58,26 +59,63 @@ function selectMatching2Array() {
   }
 }
 
-function liBuilder(content, destination, classy) {
+function liBuilder(content, destination, classy, idd) {
   var placeholder = document.createElement('li');
   placeholder.textContent = content;
   if(classy) {
     placeholder.className = classy;
+  }
+  if(idd) {
+    placeholder.id = idd;
   }
   destination.appendChild(placeholder);
 }
 
 function buildMatchingLeft() {
   for(var i = 0; i < matching1Array.length; i++) {
-    liBuilder(matching1Array[i].english, matchingLeft, 'not_selected');
+    liBuilder(matching1Array[i].english, matchingLeft, 'not_selected ' + matching1Array[i].idNum + '');
   }
 }
 
 function buildMatchingRight() {
   for(var i = 0; i < matching1Array.length; i++) {
-    liBuilder(matching2Array[i].lushootseed, matchingRight, 'not_selected');
+    liBuilder(matching2Array[i].lushootseed, matchingRight, 'not_selected ' + matching2Array[i].idNum + '');
   }
 }
+
+matchingLeft.addEventListener('click', function(event) {
+  //change class of selected li to .selected
+  //don't allow more than 1 element to be selected at once
+  //check if elemnt from matchingRight is selected, if so compare
+  //if correct, call correct function
+  //if incorrect, call incorrect function
+});
+
+matchingRight.addEventListener('click', function(event) {
+  //change class of selected li to .selected
+  //basically the same as above
+});
+
+function correctAnswer() {
+  //this will move correct answers to the bottom lists and increase score by 1
+}
+
+function wrongAnswer() {
+  //wrong answers will flash red then remove .wrong class and allow user to select again
+}
+
+// addStoreForm.addEventListener('submit', function(event) {
+//   event.preventDefault();
+//   var minCustPerHour = parseInt(document.getElementById('min_cust_per_hour').value),
+//     maxCustPerHour = parseInt(document.getElementById('max_cust_per_hour').value),
+//     avgCookiesPerCust = parseFloat(document.getElementById('avg_cookies_per_hour').value),
+//     storeName = document.getElementById('shop_location').value;
+//   new CookieStore(minCustPerHour, maxCustPerHour, avgCookiesPerCust, storeName);
+//   tableEl.textContent = '';
+//   makeTableHeader();
+//   renderCookieStores();
+//   makeTableFooter();
+// });
 
 //call some functions
 processLocalStorage();
