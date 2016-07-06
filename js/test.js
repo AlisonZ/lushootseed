@@ -44,8 +44,8 @@ function selectMatching1Array() {
       words[rand].timesShown = 0;
       matching1Array.push(words[rand]);
     }
-    console.table(matching1Array);
   }
+  console.table(matching1Array);
 }
 
 function selectMatching2Array() {
@@ -54,32 +54,32 @@ function selectMatching2Array() {
     if(matching1Array[rand].timesShown === 0) {
       matching1Array[rand].timesShown = 1;
       matching2Array.push(matching1Array[rand]);
-      console.table(matching2Array);
     }
   }
+  console.table(matching2Array);
 }
 
-function liBuilder(content, destination, classy, idd) {
+function liBuilder(content, destination, classy, dataForMatch) {
   var placeholder = document.createElement('li');
   placeholder.textContent = content;
   if(classy) {
     placeholder.className = classy;
   }
-  if(idd) {
-    placeholder.id = idd;
+  if(dataForMatch) {
+    placeholder.dataset.match = dataForMatch;
   }
   destination.appendChild(placeholder);
 }
 
 function buildMatchingLeft() {
   for(var i = 0; i < matching1Array.length; i++) {
-    liBuilder(matching1Array[i].english, matchingLeft, '' + matching1Array[i].idNum + ' not_selected');
+    liBuilder(matching1Array[i].english, matchingLeft, 'not_selected', matching1Array[i].idNum);
   }
 }
 
 function buildMatchingRight() {
   for(var i = 0; i < matching1Array.length; i++) {
-    liBuilder(matching2Array[i].lushootseed, matchingRight, '' + matching2Array[i].idNum + ' not_selected');
+    liBuilder(matching2Array[i].lushootseed, matchingRight, 'not_selected', matching2Array[i].idNum);
   }
 }
 
@@ -95,11 +95,13 @@ matchingLeft.addEventListener('click', function(event) {
   event.target.classList.remove('not_selected');
   event.target.classList.add('selected');
   for(var i = 0; i < matchingRightNodes.length; i++) {
-    if(matchingRightNodes[i].classList === event.target.classList) {
-      correctAnswer();
-    } else {
-      wrongAnswer();
+    if(matchingRightNodes[i].dataset.match === event.target.dataset.match) {
+      if(matchingRightNodes[i].classList.contains('selected')) {
+        correctAnswer();
+        break;
+      }
     }
+    // wrongAnswer();
   }
 });
 
@@ -115,11 +117,13 @@ matchingRight.addEventListener('click', function(event) {
   event.target.classList.remove('not_selected');
   event.target.classList.add('selected');
   for(var i = 0; i < matchingLeftNodes.length; i++) {
-    if(event.target.classList === matchingLeftNodes[i].classList) {
-      correctAnswer();
-    } else {
-      wrongAnswer();
+    if(event.target.dataset.match === matchingLeftNodes[i].dataset.match) {
+      if(matchingLeftNodes[i].classList.contains('selected')) {
+        correctAnswer();
+        break;
+      }
     }
+    // wrongAnswer();
   }
 });
 
