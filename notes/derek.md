@@ -21,3 +21,11 @@ Branches:
 derek2 - work on tuesday 5 july
 
 derek1 - work on friday 1 july and over the weekend
+
+<script>
+  document.getElementById('where you want it moved').appendChild(
+    document.getElementById('what you want moved')
+  );
+</script>
+
+according to http://stackoverflow.com/questions/6329108/moving-a-div-from-inside-one-div-to-another-div-using-prototype
