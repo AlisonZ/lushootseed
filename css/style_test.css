@@ -40,6 +40,11 @@ p {
   /* margin-top: 32px; */
   font-size: 32px;
 }
+
+ul {
+  margin: 10px;
+}
+
 ul li {
   padding: 15px;
   margin: 5px;

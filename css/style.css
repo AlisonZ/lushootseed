@@ -87,6 +87,7 @@ main {
 
 #sub_banner li:last-child{
   margin-right: 0px;
+
 }
 
 
@@ -101,8 +102,26 @@ button {
   background-color: #111b35;
   cursor: pointer;
 }
+li img{
+  width:300px;
+  height:400px;
+}
+#second_child{
+  width:300px;
+  height:400px;
+  font-family: 'Permanent Marker', cursive;
+  opacity: 0.4;
+}
+li p{
+      margin: -218px 68px;
+      font-size: 1.5em;
+      color: red;
+}
+
 
 /*footer styling*/
+
+
 footer {
   width: 960px;
   height: 100px;
@@ -121,5 +140,5 @@ footer p{
   position: absolute;
   color: white;
   margin-top: -50px;
-  align: center;  
+  align: center;
 }
