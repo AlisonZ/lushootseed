@@ -1,5 +1,8 @@
-main div {
+div {
   display: inline;
-  width: 350px;
   height: 600px;
+}
+
+p {
+  width: 350px;
 }
