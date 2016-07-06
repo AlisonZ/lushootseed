@@ -80,15 +80,16 @@ main {
   float:left;
   margin: 15px;
 }
-
-#sub_banner li:first-child{
+#sub_banner p{
+  color: red;
+}
+/*#sub_banner li:first-child{
   margin-left: 0px;
-}
+}*/
 
-#sub_banner li:last-child{
+/*#sub_banner li:last-child{
   margin-right: 0px;
-
-}
+}*/
 
 
 button {
@@ -106,12 +107,37 @@ li img{
   width:300px;
   height:400px;
 }
-#second_child{
+
+ul #learn{
+  height: 400px;
+  width:300px;
+  background-color: #ac0400;
+  margin-left: 0px;
+}
+
+#facebook{
   width:300px;
   height:400px;
   font-family: 'Permanent Marker', cursive;
-  opacity: 0.4;
+  /*opacity: 0.7;*/
+  outline-style: solid;
+  outline-color: black;
+  outline-width: medium;
+  /*border-style: solid;
+  border-width: medium;
+  border-color: #ac0400;*/
 }
+
+ul #tulalip{
+  width:300px;
+  height:400px;
+  background-color: #111b35;
+  margin-right: 0px;
+  outline-style: solid;
+  outline-color: black;
+  outline-width: medium;
+}
+
 li p{
       margin: -218px 68px;
       font-size: 1.5em;
