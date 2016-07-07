@@ -1,12 +1,14 @@
 div p {
   display: block;
-  height: 400px;
+  height: 450px;
   margin-top:30px;
 }
-
+main{
+  margin: 43px auto;
+}
 #firstOne{
   float: left;
-  width: 350px;
+  width: 400px;
   margin:30px 30px;
   border-style: dashed;
   border-width: medium;
@@ -14,7 +16,7 @@ div p {
 
 #alison {
   float: left;
-  width:350px;
+  width:400px;
   height:200px;
   margin-bottom:15px;
   background-image: url('http://placecage.com/300/200');
@@ -22,13 +24,13 @@ div p {
 
 #alison:hover {
   opacity: 0.5px;
-  width: 350px;
+  width: 400px;
   background-image: url('http://www.placecage.com/gif/350/200');
 }
 
 #secondOne{
   float: right;
-  width: 350px;
+  width: 400px;
   margin:30px 30px;
   border-style: dashed;
   border-width: medium;
@@ -36,7 +38,7 @@ div p {
 
 #aziza{
   float:right;
-  width:350px;
+  width:400px;
   height:200px;
   margin-bottom:15px;
   background-image: url('http://placecage.com/300/200');
@@ -44,13 +46,13 @@ div p {
 
 #aziza:hover {
   opacity: 0.5px;
-  width: 350px;
+  width: 400px;
   background-image: url('http://www.placecage.com/g/200/300');
 }
 
 #thirdOne{
   float:left;
-  width: 350px;
+  width: 400px;
   margin:30px 30px;
   border-style: dashed;
   border-width: medium;
@@ -58,7 +60,7 @@ div p {
 
 #derek{
   float:right;
-  width:350px;
+  width:400px;
   height:200px;
   margin-bottom:15px;
   background-image: url('http://placecage.com/300/200');
@@ -66,13 +68,13 @@ div p {
 
 #derek:hover {
   opacity: 0.5px;
-  width: 350px;
+  width: 400px;
   background-image: url('http://www.placecage.com/200/350');
 }
 
 #forthOne{
   float: right;
-  width: 350px;
+  width: 400px;
   margin:30px 30px;
   border-style: dashed;
   border-width: medium;
@@ -80,7 +82,7 @@ div p {
 
 #elizabeth{
   float:left;
-  width:350px;
+  width:400px;
   height:200px;
   margin-bottom:15px;
   background-image: url('http://placecage.com/300/200');
@@ -88,6 +90,6 @@ div p {
 
 #elizabeth:hover{
   opacity: 0.5px;
-  width: 350px;
+  width: 400px;
   background-image: url('http://www.placecage.com/gif/350/345');
 }
