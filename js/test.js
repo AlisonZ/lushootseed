@@ -1,9 +1,6 @@
 'use strict';
 //NOTE TO SELF -- THIS PAGE WILL BREAK IF USER HAS NOT VISITED LEARN.HTML AND HAS 5 TRUES FIRST!!!!
 
-var eWord = JSON.parse(localStorage.getItem('arrayOfFlashcards'));
-console.log(eWord);
-console.log('length',eWord.length);
 var words = [];
 var matching1Array = [];
 var matching2Array = [];
@@ -213,8 +210,13 @@ function testForOneCorrect() {
 }
 
 //call some functions
-processLocalStorage();
-selectMatching1Array();
-selectMatching2Array();
-buildMatchingLeft();
-buildMatchingRight();
+if(!localStorage.arrayOfFlashcards) {
+  var eWord = [];
+} else {
+  var eWord = JSON.parse(localStorage.getItem('arrayOfFlashcards'));
+  processLocalStorage();
+  selectMatching1Array();
+  selectMatching2Array();
+  buildMatchingLeft();
+  buildMatchingRight();
+}
