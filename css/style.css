@@ -47,12 +47,14 @@ h1 {
   background-color: #111b35;
   border-radius: 5px;
   padding: 10px 20px;
+  margin: 3px 141px;
 }
 
 #nav {
   position: absolute;
   top: 100px;
   margin: 64px;
+  margin: 52px 141px;
 }
 
 #nav li {
