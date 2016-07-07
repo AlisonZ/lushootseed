@@ -82,6 +82,8 @@ main {
 }
 #sub_banner p{
   color: red;
+  font-family: cursive;
+  padding: 91px 8px;
 }
 /*#sub_banner li:first-child{
   margin-left: 0px;
@@ -111,8 +113,10 @@ li img{
 ul #learn{
   height: 400px;
   width:300px;
-  background-color: #ac0400;
   margin-left: 0px;
+  outline-color:black;
+  outline-width:medium;
+  outline-style: solid;
 }
 
 #facebook{
