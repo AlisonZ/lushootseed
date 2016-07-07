@@ -46,3 +46,12 @@
 
 <!— pulled from  http://www.loc.gov/pictures/item/2002722477/resource/—>
 <img src="image/right.jpeg" alt="right_banner">
+
+<!— pulled from  http://image.shutterstock.com/z/stock-photo-native-american-indian-basket-weaving-detail-272227787.jpg—>
+<img src="image/bluebasket.jpg" alt="footer">
+
+<!— pulled from  http://image.shutterstock.com/z/stock-photo-native-american-indian-basket-weaving-detail-272227787.jpg—>
+<img src="image/bluebasket_flipped.jpg" alt="header">
+
+<!— pulled from  https://crosscut.com/wp-content/uploads/2016/05/0cc120d4-fcc5-4fa2-b51e-b22df784975c.jpg—>
+<img src="image/lushootseed_map.jpg" alt="map">
