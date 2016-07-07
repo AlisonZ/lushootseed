@@ -31,6 +31,7 @@ header img {
   /*border-width: 5px;*/
 }
 
+
 h1 {
   position: absolute;
   top: 5px;
@@ -79,6 +80,7 @@ main {
 p{
   font-family: 'Architects Daughter', cursive;
   font-size: 1.25em;
+      margin-bottom: 30px;
 }
 
 button {
@@ -92,27 +94,90 @@ button {
   background-color: #111b35;
   cursor: pointer;
 }
-
+banner img{
+  border-color:black;
+  border-style:solid;
+  border-width: medium;
+}
 #sub_banner li{
   float:left;
   margin-left: 30px;
 }
 
-li img{
+
+/*li img{
   width:300px;
   height:400px;
   outline-style: solid;
   outline-color: black;
   outline-width: medium;
-}
+}*/
 
 ul #learn{
   margin-left: 0px;
+  /*background-image: url('http://www.placecage.com/gif/350/200');*/
 }
 
-
+#learn {
+  height:400px;
+  outline-style: solid;
+  outline-color: black;
+  outline-width: medium;
+  width: 300px;
+  background-size: 300px 400px;
+  background-image: url('picture/left.jpeg');
+}
+#learn:hover{
+  opacity: 0.5px;
+  height:400px;
+  outline-style: solid;
+  outline-color: black;
+  outline-width: medium;
+  width: 300px;
+  background-image:url('picture/learnPage.png');
+}
+#facebook{
+  height:400px;
+  outline-style: solid;
+  outline-color: black;
+  outline-width: medium;
+  width: 300px;
+  background-size: 300px 400px;
+  background-image: url('picture/center.jpeg');
+}
+#facebook:hover{
+  opacity: 0.5px;
+  height:400px;
+  outline-style: solid;
+  outline-color: black;
+  outline-width: medium;
+  width: 300px;
+  background-size: 300px 400px;
+  background-image:url('picture/facebook.png');
+}
 ul #tulalip{
   margin-right: 0px;
+}
+#tulalip{
+  height:400px;
+  margin-right: 0px;
+  outline-style: solid;
+  outline-color: black;
+  outline-width: medium;
+  width: 300px;
+  background-size: 300px 400px;
+  background-image: url('picture/right.jpeg');
+}
+#tulalip:hover{
+  opacity: 0.5px;
+  height:400px;
+  outline-style: solid;
+  outline-color: black;
+  outline-width: medium;
+  width: 300px;
+  background-size: 300px 400px;
+  background-image:url('picture/tulalip.png');
+
 }
 
 li p{
