@@ -2,6 +2,7 @@ div p {
   display: block;
   height: 450px;
   margin-top:30px;
+      margin-left: 18px;
 }
 main{
   margin: 43px auto;
@@ -10,7 +11,7 @@ main{
   float: left;
   width: 400px;
   margin:30px 30px;
-  border-style: dashed;
+  border-style: solid;
   border-width: medium;
 }
 
@@ -19,20 +20,22 @@ main{
   width:400px;
   height:200px;
   margin-bottom:15px;
-  background-image: url('http://placecage.com/300/200');
+  background-size: 400px 400px;
+  background-image: url('faces/alison.jpg');
 }
 
 #alison:hover {
   opacity: 0.5px;
   width: 400px;
-  background-image: url('http://www.placecage.com/gif/350/200');
+  background-size: 400px 400px;
+  background-image: url('faces/alison_face.jpg');
 }
 
 #secondOne{
   float: right;
   width: 400px;
   margin:30px 30px;
-  border-style: dashed;
+  border-style: solid;
   border-width: medium;
 }
 
@@ -41,20 +44,22 @@ main{
   width:400px;
   height:200px;
   margin-bottom:15px;
-  background-image: url('http://placecage.com/300/200');
+  background-size: 400px 400px;
+  background-image: url('faces/aziza.jpg');
 }
 
 #aziza:hover {
   opacity: 0.5px;
   width: 400px;
-  background-image: url('http://www.placecage.com/g/200/300');
+  background-size: 400px 400px;
+  background-image: url('faces/aziza_face.jpg');
 }
 
 #thirdOne{
   float:left;
   width: 400px;
   margin:30px 30px;
-  border-style: dashed;
+  border-style: solid;
   border-width: medium;
 }
 
@@ -63,20 +68,22 @@ main{
   width:400px;
   height:200px;
   margin-bottom:15px;
-  background-image: url('http://placecage.com/300/200');
+  background-size: 400px 400px;
+  background-image: url('faces/derek.jpg');
 }
 
 #derek:hover {
   opacity: 0.5px;
   width: 400px;
-  background-image: url('http://www.placecage.com/200/350');
+  background-size: 400px 400px;
+  background-image: url('faces/derek_face.jpg');
 }
 
 #forthOne{
   float: right;
   width: 400px;
   margin:30px 30px;
-  border-style: dashed;
+  border-style: solid;;
   border-width: medium;
 }
 
@@ -85,11 +92,13 @@ main{
   width:400px;
   height:200px;
   margin-bottom:15px;
-  background-image: url('http://placecage.com/300/200');
+  background-size: 400px 400px;
+  background-image: url('faces/liz.jpg');
 }
 
 #elizabeth:hover{
   opacity: 0.5px;
   width: 400px;
-  background-image: url('http://www.placecage.com/gif/350/345');
+  background-size: 400px 200px;
+  background-image: url('faces/liz_face.jpg');
 }
