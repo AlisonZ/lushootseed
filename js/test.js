@@ -149,8 +149,14 @@ function correctAnswer() {
   }
   classChanger(placeholderOne, 'selected', 'correct');
   classChanger(placeholderTwo, 'selected', 'correct');
+  placeholderOne.style.opacity = 0;
+  placeholderTwo.style.opacity = 0;
   correctLeft.appendChild(placeholderOne);
+  window.getComputedStyle(placeholderOne).opacity;
   correctRight.appendChild(placeholderTwo);
+  window.getComputedStyle(placeholderTwo).opacity;
+  placeholderOne.style.opacity = 1;
+  placeholderTwo.style.opacity = 1;
   testForOneCorrect();
 }
 
@@ -176,13 +182,21 @@ function wrongAnswer() {
 }
 
 function testForOneCorrect() {
-  var matchingRightNodes = document.getElementById('matching_right').childNodes;
   var matchingLeftNodes = document.getElementById('matching_left').childNodes;
+  var matchingRightNodes = document.getElementById('matching_right').childNodes;
   if(matchingLeftNodes.length < 2) {
     classChanger(matchingLeftNodes[0], 'not_selected', 'correct');
     classChanger(matchingRightNodes[0], 'not_selected', 'correct');
+    matchingLeftNodes[0].style.opacity = 0;
+    matchingRightNodes[0].style.opacity = 0;
     correctLeft.appendChild(matchingLeftNodes[0]);
+    var correctLeftNodes = document.getElementById('correct_left').childNodes;
+    window.getComputedStyle(correctLeftNodes[4]).opacity;
     correctRight.appendChild(matchingRightNodes[0]);
+    var correctRightNodes = document.getElementById('correct_right').childNodes;
+    window.getComputedStyle(correctRightNodes[4]).opacity;
+    correctLeftNodes[4].style.opacity = 1;
+    correctRightNodes[4].style.opacity = 1;
     document.getElementById('test_complete').style.display = 'block';
     document.getElementById('instructions').style.display = 'none';
   }
