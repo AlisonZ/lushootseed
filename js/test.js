@@ -1,10 +1,8 @@
 'use strict';
-//NOTE TO SELF -- THIS PAGE WILL BREAK IF USER HAS NOT VISITED LEARN.HTML AND HAS 5 TRUES FIRST!!!!
 
 var words = [];
 var matching1Array = [];
 var matching2Array = [];
-
 var matchingLeft = document.getElementById('matching_left');
 var matchingRight = document.getElementById('matching_right');
 var correctLeft = document.getElementById('correct_left');
@@ -27,28 +25,6 @@ var classChanger = function(classChangee, classRemove, classAdd) {
   classChangee.classList.add(classAdd);
 };
 
-function selectMatching1Array() {
-  while(matching1Array.length < 5) {
-    var rand = randomNumber(words.length);
-    if(words[rand].timesShown !== 0) {
-      words[rand].timesShown = 0;
-      matching1Array.push(words[rand]);
-    }
-  }
-  console.table(matching1Array);
-}
-
-function selectMatching2Array() {
-  while(matching2Array.length < matching1Array.length) {
-    var rand = randomNumber(matching1Array.length);
-    if(matching1Array[rand].timesShown === 0) {
-      matching1Array[rand].timesShown = 1;
-      matching2Array.push(matching1Array[rand]);
-    }
-  }
-  console.table(matching2Array);
-}
-
 function liBuilder(content, destination, classy, dataForMatch) {
   var placeholder = document.createElement('li');
   placeholder.textContent = content;
@@ -59,6 +35,26 @@ function liBuilder(content, destination, classy, dataForMatch) {
     placeholder.dataset.match = dataForMatch;
   }
   destination.appendChild(placeholder);
+}
+
+function selectMatching1Array() {
+  while(matching1Array.length < 5) {
+    var rand = randomNumber(words.length);
+    if(words[rand].timesShown !== 0) {
+      words[rand].timesShown = 0;
+      matching1Array.push(words[rand]);
+    }
+  }
+}
+
+function selectMatching2Array() {
+  while(matching2Array.length < matching1Array.length) {
+    var rand = randomNumber(matching1Array.length);
+    if(matching1Array[rand].timesShown === 0) {
+      matching1Array[rand].timesShown = 1;
+      matching2Array.push(matching1Array[rand]);
+    }
+  }
 }
 
 function buildMatchingLeft() {
@@ -76,29 +72,29 @@ function buildMatchingRight() {
 matchingLeft.addEventListener('click', function(event) {
   var matchingLeftNodes = document.getElementById('matching_left').childNodes;
   var matchingRightNodes = document.getElementById('matching_right').childNodes;
-  for(var i = 0; i < matchingLeftNodes.length; i++) {
-    if(matchingLeftNodes[i].classList.contains('selected')) {
-      classChanger(matchingLeftNodes[i], 'selected', 'not_selected');
-      // matchingLeftNodes[i].classList.remove('selected');
-      // matchingLeftNodes[i].classList.add('not_selected');
-    }
-  }
-  event.target.classList.remove('not_selected');
-  event.target.classList.add('selected');
-  var bool = true;
-  for(var i = 0; i < matchingRightNodes.length; i++) {
-    if(matchingRightNodes[i].dataset.match === event.target.dataset.match) {
-      if(matchingRightNodes[i].classList.contains('selected')) {
-        bool = false;
-        correctAnswer();
-        break;
+  if(event.target.tagName === 'LI') {
+    for(var i = 0; i < matchingLeftNodes.length; i++) {
+      if(matchingLeftNodes[i].classList.contains('selected')) {
+        classChanger(matchingLeftNodes[i], 'selected', 'not_selected');
       }
     }
-  }
-  if(bool) {
+    event.target.classList.remove('not_selected');
+    event.target.classList.add('selected');
+    var bool = true;
     for(var i = 0; i < matchingRightNodes.length; i++) {
-      if(matchingRightNodes[i].classList.contains('selected')) {
-        wrongAnswer();
+      if(matchingRightNodes[i].dataset.match === event.target.dataset.match) {
+        if(matchingRightNodes[i].classList.contains('selected')) {
+          bool = false;
+          correctAnswer();
+          break;
+        }
+      }
+    }
+    if(bool) {
+      for(var i = 0; i < matchingRightNodes.length; i++) {
+        if(matchingRightNodes[i].classList.contains('selected')) {
+          wrongAnswer();
+        }
       }
     }
   }
@@ -107,29 +103,29 @@ matchingLeft.addEventListener('click', function(event) {
 matchingRight.addEventListener('click', function(event) {
   var matchingRightNodes = document.getElementById('matching_right').childNodes;
   var matchingLeftNodes = document.getElementById('matching_left').childNodes;
-  for(var i = 0; i < matchingRightNodes.length; i++) {
-    if(matchingRightNodes[i].classList.contains('selected')) {
-      classChanger(matchingRightNodes[i], 'selected', 'not_selected');
-      // matchingRightNodes[i].classList.remove('selected');
-      // matchingRightNodes[i].classList.add('not_selected');
-    }
-  }
-  event.target.classList.remove('not_selected');
-  event.target.classList.add('selected');
-  var bool = true;
-  for(var i = 0; i < matchingLeftNodes.length; i++) {
-    if(event.target.dataset.match === matchingLeftNodes[i].dataset.match) {
-      if(matchingLeftNodes[i].classList.contains('selected')) {
-        bool = false;
-        correctAnswer();
-        break;
+  if(event.target.tagName === 'LI') {
+    for(var i = 0; i < matchingRightNodes.length; i++) {
+      if(matchingRightNodes[i].classList.contains('selected')) {
+        classChanger(matchingRightNodes[i], 'selected', 'not_selected');
       }
     }
-  }
-  if(bool) {
+    event.target.classList.remove('not_selected');
+    event.target.classList.add('selected');
+    var bool = true;
     for(var i = 0; i < matchingLeftNodes.length; i++) {
-      if(matchingLeftNodes[i].classList.contains('selected')) {
-        wrongAnswer();
+      if(event.target.dataset.match === matchingLeftNodes[i].dataset.match) {
+        if(matchingLeftNodes[i].classList.contains('selected')) {
+          bool = false;
+          correctAnswer();
+          break;
+        }
+      }
+    }
+    if(bool) {
+      for(var i = 0; i < matchingLeftNodes.length; i++) {
+        if(matchingLeftNodes[i].classList.contains('selected')) {
+          wrongAnswer();
+        }
       }
     }
   }
@@ -152,12 +148,7 @@ function correctAnswer() {
     }
   }
   classChanger(placeholderOne, 'selected', 'correct');
-  // placeholderOne.classList.remove('selected');
-  // placeholderOne.classList.add('correct');
   classChanger(placeholderTwo, 'selected', 'correct');
-  // placeholderTwo.classList.remove('selected');
-  // placeholderTwo.classList.add('correct');
-  console.log('correct answer');
   correctLeft.appendChild(placeholderOne);
   correctRight.appendChild(placeholderTwo);
   testForOneCorrect();
@@ -177,20 +168,11 @@ function wrongAnswer() {
     }
   }
   classChanger(placeholderOne, 'selected', 'wrong');
-  // placeholderOne.classList.remove('selected');
-  // placeholderOne.classList.add('wrong');
   classChanger(placeholderTwo, 'selected', 'wrong');
-  // placeholderTwo.classList.remove('selected');
-  // placeholderTwo.classList.add('wrong');
   setTimeout(function() {
     classChanger(placeholderOne, 'wrong', 'not_selected');
-    // placeholderOne.classList.remove('wrong');
-    // placeholderOne.classList.add('not_selected');
     classChanger(placeholderTwo, 'wrong', 'not_selected');
-    // placeholderTwo.classList.remove('wrong');
-    // placeholderTwo.classList.add('not_selected');
   }, 500);
-  console.log('wrong answer');
 }
 
 function testForOneCorrect() {
@@ -198,22 +180,24 @@ function testForOneCorrect() {
   var matchingLeftNodes = document.getElementById('matching_left').childNodes;
   if(matchingLeftNodes.length < 2) {
     classChanger(matchingLeftNodes[0], 'not_selected', 'correct');
-    // matchingLeftNodes[0].classList.remove('not_selected');
-    // matchingLeftNodes[0].classList.add('correct');
     classChanger(matchingRightNodes[0], 'not_selected', 'correct');
-    // matchingRightNodes[0].classList.remove('not_selected');
-    // matchingRightNodes[0].classList.add('correct');
     correctLeft.appendChild(matchingLeftNodes[0]);
     correctRight.appendChild(matchingRightNodes[0]);
     document.getElementById('test_complete').style.display = 'block';
   }
 }
 
-//call some functions
+//check localStorage and load page content if it meets requirements
 if(localStorage.arrayOfFlashcards) {
   var eWord = JSON.parse(localStorage.getItem('arrayOfFlashcards'));
-  if(eWord.length < 10) {
-    window.location.assign('learn.html');
+  var counter = 0;
+  for(var i = 0; i < eWord.length; i++) {
+    if(eWord[i].shown) {
+      counter++;
+    }
+  }
+  if(counter < 5) {
+    window.location = 'learn.html';
   } else {
     processLocalStorage();
     selectMatching1Array();
@@ -221,7 +205,6 @@ if(localStorage.arrayOfFlashcards) {
     buildMatchingLeft();
     buildMatchingRight();
   }
+} else {
+  window.location = 'learn.html';
 }
-// function newDoc() {
-//     window.location.assign("http://www.w3schools.com")
-// }
