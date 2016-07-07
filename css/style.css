@@ -73,6 +73,7 @@ main {
   margin: 0px auto;
 }
 
+
 p{
   font-family: 'Architects Daughter', cursive;
   font-size: 1.25em;
@@ -91,9 +92,11 @@ button {
   cursor: pointer;
 }
 
+
 #sub_banner li{
   float:left;
   margin-left: 30px;
+
 }
 
 li img{
