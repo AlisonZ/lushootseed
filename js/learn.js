@@ -24,7 +24,6 @@ function Flashcard(eng, lush, url, idNum, sound, phonetic) {
   arrayOfFlashcards.push(this);
 }
 
-//make Flashcard objects here
 function makeFlashcards() {
   new Flashcard('carrot','\u0161\u0259g\u02B7aq', 'image/wordphotos/carrots.jpeg', 1, 'soundFiles/carrots.wav', 0);
   new Flashcard('salmon','s\u0294uladx\u02B7', 'image/wordphotos/salmon.jpg', 2, 'soundFiles/salmon.wav', 0);
@@ -80,6 +79,21 @@ function showTestButton() {
   }
 }
 
-//call functions
-makeFlashcards();
+if(localStorage.arrayOfFlashcards) {
+  var eWord = JSON.parse(localStorage.getItem('arrayOfFlashcards'));
+  if(eWord.length < 7) {
+    makeFlashcards();
+  }
+  else {
+    arrayOfFlashcards = eWord;
+    for(var i = 0; i < arrayOfFlashcards.length; i++) {
+      if(arrayOfFlashcards[i].timesShown >= 1) {
+        arrayOfFlashcards[i].timesShown = 1;
+        numFlashcardsShown++;
+      }
+    }
+  }
+} else {
+  makeFlashcards();
+}
 displayFlashcard();

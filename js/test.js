@@ -72,27 +72,29 @@ function buildMatchingRight() {
 matchingLeft.addEventListener('click', function(event) {
   var matchingLeftNodes = document.getElementById('matching_left').childNodes;
   var matchingRightNodes = document.getElementById('matching_right').childNodes;
-  for(var i = 0; i < matchingLeftNodes.length; i++) {
-    if(matchingLeftNodes[i].classList.contains('selected')) {
-      classChanger(matchingLeftNodes[i], 'selected', 'not_selected');
-    }
-  }
-  event.target.classList.remove('not_selected');
-  event.target.classList.add('selected');
-  var bool = true;
-  for(var i = 0; i < matchingRightNodes.length; i++) {
-    if(matchingRightNodes[i].dataset.match === event.target.dataset.match) {
-      if(matchingRightNodes[i].classList.contains('selected')) {
-        bool = false;
-        correctAnswer();
-        break;
+  if(event.target.tagName === 'LI') {
+    for(var i = 0; i < matchingLeftNodes.length; i++) {
+      if(matchingLeftNodes[i].classList.contains('selected')) {
+        classChanger(matchingLeftNodes[i], 'selected', 'not_selected');
       }
     }
-  }
-  if(bool) {
+    event.target.classList.remove('not_selected');
+    event.target.classList.add('selected');
+    var bool = true;
     for(var i = 0; i < matchingRightNodes.length; i++) {
-      if(matchingRightNodes[i].classList.contains('selected')) {
-        wrongAnswer();
+      if(matchingRightNodes[i].dataset.match === event.target.dataset.match) {
+        if(matchingRightNodes[i].classList.contains('selected')) {
+          bool = false;
+          correctAnswer();
+          break;
+        }
+      }
+    }
+    if(bool) {
+      for(var i = 0; i < matchingRightNodes.length; i++) {
+        if(matchingRightNodes[i].classList.contains('selected')) {
+          wrongAnswer();
+        }
       }
     }
   }
@@ -101,27 +103,29 @@ matchingLeft.addEventListener('click', function(event) {
 matchingRight.addEventListener('click', function(event) {
   var matchingRightNodes = document.getElementById('matching_right').childNodes;
   var matchingLeftNodes = document.getElementById('matching_left').childNodes;
-  for(var i = 0; i < matchingRightNodes.length; i++) {
-    if(matchingRightNodes[i].classList.contains('selected')) {
-      classChanger(matchingRightNodes[i], 'selected', 'not_selected');
-    }
-  }
-  event.target.classList.remove('not_selected');
-  event.target.classList.add('selected');
-  var bool = true;
-  for(var i = 0; i < matchingLeftNodes.length; i++) {
-    if(event.target.dataset.match === matchingLeftNodes[i].dataset.match) {
-      if(matchingLeftNodes[i].classList.contains('selected')) {
-        bool = false;
-        correctAnswer();
-        break;
+  if(event.target.tagName === 'LI') {
+    for(var i = 0; i < matchingRightNodes.length; i++) {
+      if(matchingRightNodes[i].classList.contains('selected')) {
+        classChanger(matchingRightNodes[i], 'selected', 'not_selected');
       }
     }
-  }
-  if(bool) {
+    event.target.classList.remove('not_selected');
+    event.target.classList.add('selected');
+    var bool = true;
     for(var i = 0; i < matchingLeftNodes.length; i++) {
-      if(matchingLeftNodes[i].classList.contains('selected')) {
-        wrongAnswer();
+      if(event.target.dataset.match === matchingLeftNodes[i].dataset.match) {
+        if(matchingLeftNodes[i].classList.contains('selected')) {
+          bool = false;
+          correctAnswer();
+          break;
+        }
+      }
+    }
+    if(bool) {
+      for(var i = 0; i < matchingLeftNodes.length; i++) {
+        if(matchingLeftNodes[i].classList.contains('selected')) {
+          wrongAnswer();
+        }
       }
     }
   }
@@ -188,7 +192,7 @@ if(localStorage.arrayOfFlashcards) {
   var eWord = JSON.parse(localStorage.getItem('arrayOfFlashcards'));
   var counter = 0;
   for(var i = 0; i < eWord.length; i++) {
-    if(eWord.shown) {
+    if(eWord[i].shown) {
       counter++;
     }
   }
