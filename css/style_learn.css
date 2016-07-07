@@ -7,6 +7,17 @@ body li {
   margin: 30px auto;
 }
 
+h2 {
+  font-family: 'Rock Salt', cursive;
+  font-size: 2em;
+  color: #eee;
+  background-color: #111b35;
+  border-radius: 5px;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
 #flashcard {
   width: 900px;
   height: 450px;
