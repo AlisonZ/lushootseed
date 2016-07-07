@@ -1,6 +1,6 @@
-* {
+/** {
   outline: 1px dashed purple;
-}
+}*/
 
 #english_radio{
   padding: 100px;
@@ -17,14 +17,21 @@
 }
 
 ul {
-  /*margin: 10px;*/
+  /*none yet*/
 }
 
-ul li {
+main ul {
+  /*transition: 1000ms all;*/
+}
+
+main ul li {
   border-radius: 5px;
   margin-top: 10px;
   padding: 15px;
   text-align: center;
+  background: #666;
+  color: #eee;
+  transition: 300ms all;
 }
 
 #matching_section {
@@ -62,17 +69,23 @@ ul li {
   width: 45%;
 }
 
+#correct_title {
+  display: none;
+  margin: 30px;
+  text-align: center;
+  font-size: 1.5em;
+  color: black;
+}
+
 #test_complete {
   display: none;
 }
 
 .not_selected {
-  /*style for elements that haven't been selected*/
   border: 3px solid black;
 }
 
 .selected {
-  /*style for selected elements here*/
   border: 3px solid blue;
 }
 

@@ -3,9 +3,7 @@
 }
 
 body {
-  /*background-color:#ffd399;*/
-  width: 960px;
-  margin: 30px auto;
+  background-color:#eee;
 }
 
 a {
@@ -15,7 +13,6 @@ a {
 
 /*header styling*/
 header {
-  width: 960px;
   height: 150px;
   margin: 0px auto;
   border-bottom: 5px solid #111b35;
@@ -27,6 +24,7 @@ header {
 
 .header_inner{
   width: 960px;
+  margin: 30px auto;
 }
 
 header img {
@@ -68,7 +66,6 @@ h1 {
   cursor: pointer;
 }
 
-
 /*main styling*/
 main {
   /*height: 580px;*/
@@ -76,22 +73,11 @@ main {
   margin: 0px auto;
 }
 
-#sub_banner li{
-  float:left;
-  margin: 15px;
-}
-#sub_banner p{
-  color: red;
-  font-family: cursive;
-  padding: 91px 8px;
-}
-/*#sub_banner li:first-child{
-  margin-left: 0px;
-}*/
 
-/*#sub_banner li:last-child{
-  margin-right: 0px;
-}*/
+p{
+  font-family: 'Architects Daughter', cursive;
+  font-size: 1.25em;
+}
 
 
 button {
@@ -105,41 +91,29 @@ button {
   background-color: #111b35;
   cursor: pointer;
 }
+
+
+#sub_banner li{
+  float:left;
+  margin-left: 30px;
+
+}
+
 li img{
   width:300px;
   height:400px;
+  outline-style: solid;
+  outline-color: black;
+  outline-width: medium;
 }
 
 ul #learn{
-  height: 400px;
-  width:300px;
   margin-left: 0px;
-  outline-color:black;
-  outline-width:medium;
-  outline-style: solid;
 }
 
-#facebook{
-  width:300px;
-  height:400px;
-  font-family: 'Permanent Marker', cursive;
-  /*opacity: 0.7;*/
-  outline-style: solid;
-  outline-color: black;
-  outline-width: medium;
-  /*border-style: solid;
-  border-width: medium;
-  border-color: #ac0400;*/
-}
 
 ul #tulalip{
-  width:300px;
-  height:400px;
-  background-color: #111b35;
   margin-right: 0px;
-  outline-style: solid;
-  outline-color: black;
-  outline-width: medium;
 }
 
 li p{
@@ -148,27 +122,25 @@ li p{
       color: red;
 }
 
-
 /*footer styling*/
-
-
 footer {
-  width: 960px;
-  height: 100px;
+  clear: both;
   margin: 0px auto;
+  height: 50px;
   overflow: hidden;
-  border-top: 5px solid #111b35;
+  border-top: 5px solid #111b35;*/
   /*border-width: 5px 5px 0px 5px;*/
   /*border-radius: 10px 10px 0px 0px;*/
 }
 
-/*footer img {
+footer img {
   width: 100%;
   opacity: 0.8;
-}*/
+}
+
 footer p{
   position: absolute;
-  color: white;
-  margin-top: -50px;
+  color: black;
+  margin-top: -130px;
   align: center;
 }

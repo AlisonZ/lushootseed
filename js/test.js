@@ -25,6 +25,11 @@ var randomNumber = function(maxLength) {
   return Math.floor(Math.random() * maxLength);
 };
 
+var classChanger = function(classChangee, classRemove, classAdd) {
+  classChangee.classList.remove(classRemove);
+  classChangee.classList.add(classAdd);
+};
+
 function selectMatching1Array() {
   while(matching1Array.length < 5) {
     var rand = randomNumber(words.length);
@@ -76,8 +81,9 @@ matchingLeft.addEventListener('click', function(event) {
   var matchingRightNodes = document.getElementById('matching_right').childNodes;
   for(var i = 0; i < matchingLeftNodes.length; i++) {
     if(matchingLeftNodes[i].classList.contains('selected')) {
-      matchingLeftNodes[i].classList.remove('selected');
-      matchingLeftNodes[i].classList.add('not_selected');
+      classChanger(matchingLeftNodes[i], 'selected', 'not_selected');
+      // matchingLeftNodes[i].classList.remove('selected');
+      // matchingLeftNodes[i].classList.add('not_selected');
     }
   }
   event.target.classList.remove('not_selected');
@@ -106,8 +112,9 @@ matchingRight.addEventListener('click', function(event) {
   var matchingLeftNodes = document.getElementById('matching_left').childNodes;
   for(var i = 0; i < matchingRightNodes.length; i++) {
     if(matchingRightNodes[i].classList.contains('selected')) {
-      matchingRightNodes[i].classList.remove('selected');
-      matchingRightNodes[i].classList.add('not_selected');
+      classChanger(matchingRightNodes[i], 'selected', 'not_selected');
+      // matchingRightNodes[i].classList.remove('selected');
+      // matchingRightNodes[i].classList.add('not_selected');
     }
   }
   event.target.classList.remove('not_selected');
@@ -136,6 +143,7 @@ function correctAnswer() {
   var matchingLeftNodes = document.getElementById('matching_left').childNodes;
   var correctLeft = document.getElementById('correct_left');
   var correctRight = document.getElementById('correct_right');
+  document.getElementById('correct_title').style.display = 'block';
   for(var i = 0; i < matchingLeftNodes.length; i++) {
     if(matchingLeftNodes[i].classList.contains('selected')) {
       var placeholderOne = matchingLeftNodes[i];
@@ -146,10 +154,12 @@ function correctAnswer() {
       var placeholderTwo = matchingRightNodes[i];
     }
   }
-  placeholderOne.classList.remove('selected');
-  placeholderOne.classList.add('correct');
-  placeholderTwo.classList.remove('selected');
-  placeholderTwo.classList.add('correct');
+  classChanger(placeholderOne, 'selected', 'correct');
+  // placeholderOne.classList.remove('selected');
+  // placeholderOne.classList.add('correct');
+  classChanger(placeholderTwo, 'selected', 'correct');
+  // placeholderTwo.classList.remove('selected');
+  // placeholderTwo.classList.add('correct');
   console.log('correct answer');
   correctLeft.appendChild(placeholderOne);
   correctRight.appendChild(placeholderTwo);
@@ -169,15 +179,19 @@ function wrongAnswer() {
       var placeholderTwo = matchingRightNodes[i];
     }
   }
-  placeholderOne.classList.remove('selected');
-  placeholderOne.classList.add('wrong');
-  placeholderTwo.classList.remove('selected');
-  placeholderTwo.classList.add('wrong');
+  classChanger(placeholderOne, 'selected', 'wrong');
+  // placeholderOne.classList.remove('selected');
+  // placeholderOne.classList.add('wrong');
+  classChanger(placeholderTwo, 'selected', 'wrong');
+  // placeholderTwo.classList.remove('selected');
+  // placeholderTwo.classList.add('wrong');
   setTimeout(function() {
-    placeholderOne.classList.remove('wrong');
-    placeholderOne.classList.add('not_selected');
-    placeholderTwo.classList.remove('wrong');
-    placeholderTwo.classList.add('not_selected');
+    classChanger(placeholderOne, 'wrong', 'not_selected');
+    // placeholderOne.classList.remove('wrong');
+    // placeholderOne.classList.add('not_selected');
+    classChanger(placeholderTwo, 'wrong', 'not_selected');
+    // placeholderTwo.classList.remove('wrong');
+    // placeholderTwo.classList.add('not_selected');
   }, 500);
   console.log('wrong answer');
 }
@@ -186,10 +200,12 @@ function testForOneCorrect() {
   var matchingRightNodes = document.getElementById('matching_right').childNodes;
   var matchingLeftNodes = document.getElementById('matching_left').childNodes;
   if(matchingLeftNodes.length < 2) {
-    matchingLeftNodes[0].classList.remove('not_selected');
-    matchingLeftNodes[0].classList.add('correct');
-    matchingRightNodes[0].classList.remove('not_selected');
-    matchingRightNodes[0].classList.add('correct');
+    classChanger(matchingLeftNodes[0], 'not_selected', 'correct');
+    // matchingLeftNodes[0].classList.remove('not_selected');
+    // matchingLeftNodes[0].classList.add('correct');
+    classChanger(matchingRightNodes[0], 'not_selected', 'correct');
+    // matchingRightNodes[0].classList.remove('not_selected');
+    // matchingRightNodes[0].classList.add('correct');
     correctLeft.appendChild(matchingLeftNodes[0]);
     correctRight.appendChild(matchingRightNodes[0]);
     document.getElementById('test_complete').style.display = 'block';
