@@ -25,6 +25,11 @@ var randomNumber = function(maxLength) {
   return Math.floor(Math.random() * maxLength);
 };
 
+var classChanger = function(classChangee, classRemove, classAdd) {
+  classChangee.classList.remove(classRemove);
+  classChangee.classList.add(classAdd);
+};
+
 function selectMatching1Array() {
   while(matching1Array.length < 5) {
     var rand = randomNumber(words.length);
@@ -76,8 +81,9 @@ matchingLeft.addEventListener('click', function(event) {
   var matchingRightNodes = document.getElementById('matching_right').childNodes;
   for(var i = 0; i < matchingLeftNodes.length; i++) {
     if(matchingLeftNodes[i].classList.contains('selected')) {
-      matchingLeftNodes[i].classList.remove('selected');
-      matchingLeftNodes[i].classList.add('not_selected');
+      classChanger(matchingLeftNodes[i], 'selected', 'not_selected');
+      // matchingLeftNodes[i].classList.remove('selected');
+      // matchingLeftNodes[i].classList.add('not_selected');
     }
   }
   event.target.classList.remove('not_selected');
@@ -106,8 +112,9 @@ matchingRight.addEventListener('click', function(event) {
   var matchingLeftNodes = document.getElementById('matching_left').childNodes;
   for(var i = 0; i < matchingRightNodes.length; i++) {
     if(matchingRightNodes[i].classList.contains('selected')) {
-      matchingRightNodes[i].classList.remove('selected');
-      matchingRightNodes[i].classList.add('not_selected');
+      classChanger(matchingRightNodes[i], 'selected', 'not_selected');
+      // matchingRightNodes[i].classList.remove('selected');
+      // matchingRightNodes[i].classList.add('not_selected');
     }
   }
   event.target.classList.remove('not_selected');
