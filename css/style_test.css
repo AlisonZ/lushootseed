@@ -20,6 +20,10 @@ ul {
   /*none yet*/
 }
 
+main ul {
+  /*transition: 1000ms all;*/
+}
+
 main ul li {
   border-radius: 5px;
   margin-top: 10px;
@@ -27,6 +31,7 @@ main ul li {
   text-align: center;
   background: #666;
   color: #eee;
+  transition: 300ms all;
 }
 
 #matching_section {
@@ -62,6 +67,14 @@ main ul li {
 #correct_right {
   display: inline-block;;
   width: 45%;
+}
+
+#correct_title {
+  display: none;
+  margin: 30px;
+  text-align: center;
+  font-size: 1.5em;
+  color: black;
 }
 
 #test_complete {
