@@ -210,13 +210,18 @@ function testForOneCorrect() {
 }
 
 //call some functions
-if(!localStorage.arrayOfFlashcards) {
-  var eWord = [];
-} else {
+if(localStorage.arrayOfFlashcards) {
   var eWord = JSON.parse(localStorage.getItem('arrayOfFlashcards'));
-  processLocalStorage();
-  selectMatching1Array();
-  selectMatching2Array();
-  buildMatchingLeft();
-  buildMatchingRight();
+  if(eWord.length < 10) {
+    window.location.assign('learn.html');
+  } else {
+    processLocalStorage();
+    selectMatching1Array();
+    selectMatching2Array();
+    buildMatchingLeft();
+    buildMatchingRight();
+  }
 }
+// function newDoc() {
+//     window.location.assign("http://www.w3schools.com")
+// }
