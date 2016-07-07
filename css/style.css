@@ -189,10 +189,11 @@ li p{
 /*footer styling*/
 footer {
   clear: both;
-  margin: 0px auto;
-  height: 50px;
+  margin: 30px 0px;
+  height: 130px;
   overflow: hidden;
-  border-top: 5px solid #111b35;
+  border: solid #111b35;
+  border-width: 5px 0px 5px 0px;
 }
 
 footer img {
