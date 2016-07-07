@@ -63,7 +63,6 @@ function displayFlashcard() {
   flashcardAudio.src = arrayOfFlashcards[placeholder].sound;
   numFlashcardsShown++;
   arrayOfFlashcards[placeholder].timesShown++;
-  console.log('times shown incremented', arrayOfFlashcards[placeholder].timesShown);
   localStorage.setItem('arrayOfFlashcards', JSON.stringify(arrayOfFlashcards));
   showTestButton();
 }
