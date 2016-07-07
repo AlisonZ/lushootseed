@@ -184,6 +184,7 @@ function testForOneCorrect() {
     correctLeft.appendChild(matchingLeftNodes[0]);
     correctRight.appendChild(matchingRightNodes[0]);
     document.getElementById('test_complete').style.display = 'block';
+    document.getElementById('instructions').style.display = 'none';
   }
 }
 
