@@ -11,6 +11,7 @@ div p {
   border-style: dashed;
   border-width: medium;
 }
+
 #alison {
   float: left;
   width:350px;
@@ -18,6 +19,7 @@ div p {
   margin-bottom:15px;
   background-image: url('http://placecage.com/300/200');
 }
+
 #alison:hover {
   opacity: 0.5px;
   width: 350px;
@@ -26,11 +28,12 @@ div p {
 
 #secondOne{
   float: right;
-    width: 350px;
-    margin:30px 30px;
-    border-style: dashed;
-    border-width: medium;
+  width: 350px;
+  margin:30px 30px;
+  border-style: dashed;
+  border-width: medium;
 }
+
 #aziza{
   float:right;
   width:350px;
@@ -38,6 +41,7 @@ div p {
   margin-bottom:15px;
   background-image: url('http://placecage.com/300/200');
 }
+
 #aziza:hover {
   opacity: 0.5px;
   width: 350px;
@@ -46,11 +50,12 @@ div p {
 
 #thirdOne{
   float:left;
-    width: 350px;
-    margin:30px 30px;
-    border-style: dashed;
-    border-width: medium;
+  width: 350px;
+  margin:30px 30px;
+  border-style: dashed;
+  border-width: medium;
 }
+
 #derek{
   float:right;
   width:350px;
@@ -64,14 +69,15 @@ div p {
   width: 350px;
   background-image: url('http://www.placecage.com/200/350');
 }
+
 #forthOne{
   float: right;
-    width: 350px;
-    margin:30px 30px;
-    border-style: dashed;
-    border-width: medium;
-
+  width: 350px;
+  margin:30px 30px;
+  border-style: dashed;
+  border-width: medium;
 }
+
 #elizabeth{
   float:left;
   width:350px;
@@ -79,6 +85,7 @@ div p {
   margin-bottom:15px;
   background-image: url('http://placecage.com/300/200');
 }
+
 #elizabeth:hover{
   opacity: 0.5px;
   width: 350px;
