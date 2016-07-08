@@ -1,11 +1,15 @@
-div p {
-  display: block;
-  height: 450px;
-  margin:30px 0px 0px 18px;
+p {
+  color: #333;
 }
 
-main {
-  margin: 43px auto;
+div p {
+  display: block;
+  height: 500px;
+  margin:30px 5px 0px 18px;
+}
+
+section p a {
+  color: #ac0400;
 }
 
 .outer {
@@ -15,23 +19,28 @@ main {
   border-radius: 5px;
 }
 
+.picture {
+  width: 400px;
+  height: 200px;
+  margin-bottom: 15px;
+  background-size: 400px 400px;
+}
+
+.picture:hover {
+  width: 400px;
+  background-size: 400px 400px;
+}
+
 #firstOne{
   float: left;
 }
 
 #alison {
   float: left;
-  width:400px;
-  height:200px;
-  margin-bottom:15px;
-  background-size: 400px 400px;
   background-image: url('faces/alison.jpg');
 }
 
 #alison:hover {
-  opacity: 0.5px;
-  width: 400px;
-  background-size: 400px 400px;
   background-image: url('faces/alison_face.jpg');
 }
 
@@ -41,17 +50,10 @@ main {
 
 #aziza {
   float:right;
-  width:400px;
-  height:200px;
-  margin-bottom:15px;
-  background-size: 400px 400px;
   background-image: url('faces/aziza.jpg');
 }
 
 #aziza:hover {
-  opacity: 0.5px;
-  width: 400px;
-  background-size: 400px 400px;
   background-image: url('faces/aziza_face.jpg');
 }
 
@@ -61,17 +63,10 @@ main {
 
 #derek {
   float:right;
-  width:400px;
-  height:200px;
-  margin-bottom:15px;
-  background-size: 400px 400px;
   background-image: url('faces/derek.jpg');
 }
 
 #derek:hover {
-  opacity: 0.5px;
-  width: 400px;
-  background-size: 400px 400px;
   background-image: url('faces/derek_face.jpg');
 }
 
@@ -81,16 +76,10 @@ main {
 
 #elizabeth {
   float:left;
-  width:400px;
-  height:200px;
-  margin-bottom:15px;
-  background-size: 400px 400px;
   background-image: url('faces/liz.jpg');
 }
 
 #elizabeth:hover {
-  opacity: 0.5px;
-  width: 400px;
   background-size: 400px 200px;
   background-image: url('faces/liz_face.jpg');
 }
