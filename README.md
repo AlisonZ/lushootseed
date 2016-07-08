@@ -53,5 +53,5 @@
 <!— pulled from  http://image.shutterstock.com/z/stock-photo-native-american-indian-basket-weaving-detail-272227787.jpg—>
 <img src="image/bluebasket_flipped.jpg" alt="header">
 
-<!— pulled from  https://crosscut.com/wp-content/uploads/2016/05/0cc120d4-fcc5-4fa2-b51e-b22df784975c.jpg—>
+<!— pulled from  https://crosscut.com/wp-content/uploads/2016/05/0cc120d4-fcc5-4fa2-b51e-b22df784975c.jpgs—>
 <img src="image/lushootseed_map.jpg" alt="map">
