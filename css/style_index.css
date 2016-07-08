@@ -1,4 +1,71 @@
+p {
+  margin-top: 30px;
+}
+
 div ul li {
   width: 300px;
   height: 400px;
+}
+
+section img{
+  width: 960px;
+  outline: 5px solid #111b35;
+}
+
+li p{
+  margin: -218px 68px;
+  font-size: 1.5em;
+  color: red;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.pic_link {
+  height: 400px;
+  width: 300px;
+  outline: 5px solid #111b35;
+  background-size: 300px 400px;
+}
+
+.pic_link:hover {
+  height: 400px;
+  width: 300px;
+  outline: 5px solid #111b35;
+  background-size: 300px 400px;
+}
+
+#language_info {
+  padding: 0px 5px;
+}
+
+#sub_banner li{
+  float:left;
+}
+
+#learn {
+  background-image: url('picture/left.jpeg');
+}
+
+#learn:hover{
+  background-image:url('picture/learnPage.png');
+}
+
+#facebook{
+  margin-left: 30px;
+  background-image: url('picture/center.jpeg');
+}
+
+#facebook:hover{
+  background-image:url('picture/facebook.png');
+}
+
+#tulalip{
+  margin-left: 30px;
+  background-image: url('picture/right.jpeg');
+}
+
+#tulalip:hover{
+  background-image:url('picture/tulalip.png');
 }

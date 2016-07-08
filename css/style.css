@@ -8,52 +8,44 @@ a {
   cursor: pointer;
 }
 
+/*header styling*/
 header {
+  background-image: url('../image/bluebasket_flipped.jpg');
+  background-size: 100% 130px;
+  background-repeat: no-repeat;
   height: 130px;
   border: solid #111b35;
   border-width: 5px 0px;
-  overflow: hidden;
-  min-width: 600px;
+  min-width: 960px;
   margin: 30px 0px;
 }
 
-.header_inner{
-  width: 960px;
-  margin: 30px auto;
-}
-
-header img {
-  width: 100%;
-  min-width: 1150px;
-  min-height: 150px;
-  opacity: 0.8;
-  /*border:1px solid black;*/
-  /*border-width: 5px;*/
-}
-
-
 h1 {
   position: absolute;
-  top: 5px;
-  margin-left: 30px;
+  top: -25px;
+  margin-left: 15px;
+  border-radius: 5px;
+  padding: 12px 20px;
+  background-color: #111b35;
   font-family: 'Rock Salt', cursive;
   font-size: 2.5em;
   color: #eee;
-  background-color: #111b35;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin: 3px 141px;
+  cursor: pointer;
 }
 
 h1 a {
   color: #eee;
 }
 
+.header_inner {
+  position: relative;
+  width: 960px;
+  margin: 0px auto;
+}
+
 #nav {
   position: absolute;
-  top: 100px;
-  margin: 64px;
-  margin: 52px 141px;
+  top: 115px;
 }
 
 #nav li {
@@ -62,138 +54,52 @@ h1 a {
 }
 
 #nav li a {
+  border-radius: 3px;
+  background-color: #ac0400;
+  padding: 2px 10px;
   font-family: 'Permanent Marker', cursive;
   font-size: 1.5em;
   color: #eee;
-  background-color: #ac0400;
-  border-radius: 3px;
-  padding: 2px 10px;
   cursor: pointer;
 }
 
+/*main styling*/
 main {
   width: 960px;
   margin: 0px auto;
 }
 
 
-p{
+p {
+  margin-bottom: 30px;
   font-family: 'Architects Daughter', cursive;
   font-size: 1.25em;
-      margin-bottom: 30px;
+  line-height: 22px;
 }
 
 button {
+  margin: 10px 30px;
   border: none;
+  border-radius: 3px;
+  background-color: #111b35;
+  padding: 2px 10px;
   font-family: 'Permanent Marker', cursive;
   font-size: 1.5em;
   color: #eee;
-  margin: 10px 30px;
-  border-radius: 3px;
-  padding: 2px 10px;
-  background-color: #111b35;
   cursor: pointer;
 }
-banner img{
-  border-color:black;
-  border-style:solid;
-  border-width: medium;
-}
-#sub_banner li{
-  float:left;
-  margin-left: 30px;
-}
 
-
-/*li img{
-  width:300px;
-  height:400px;
-  outline-style: solid;
-  outline-color: black;
-  outline-width: medium;
-}*/
-
-ul #learn{
-  margin-left: 0px;
-  /*background-image: url('http://www.placecage.com/gif/350/200');*/
-}
-
-#learn {
-  height:400px;
-  outline-style: solid;
-  outline-color: black;
-  outline-width: medium;
-  width: 300px;
-  background-size: 300px 400px;
-  background-image: url('picture/left.jpeg');
-}
-#learn:hover{
-  opacity: 0.5px;
-  height:400px;
-  outline-style: solid;
-  outline-color: black;
-  outline-width: medium;
-  width: 300px;
-  background-image:url('picture/learnPage.png');
-}
-#facebook{
-  height:400px;
-  outline-style: solid;
-  outline-color: black;
-  outline-width: medium;
-  width: 300px;
-  background-size: 300px 400px;
-  background-image: url('picture/center.jpeg');
-}
-#facebook:hover{
-  opacity: 0.5px;
-  height:400px;
-  outline-style: solid;
-  outline-color: black;
-  outline-width: medium;
-  width: 300px;
-  background-size: 300px 400px;
-  background-image:url('picture/facebook.png');
-}
-ul #tulalip{
-  margin-right: 0px;
-}
-#tulalip{
-  height:400px;
-  margin-right: 0px;
-  outline-style: solid;
-  outline-color: black;
-  outline-width: medium;
-  width: 300px;
-  background-size: 300px 400px;
-  background-image: url('picture/right.jpeg');
-}
-#tulalip:hover{
-  opacity: 0.5px;
-  height:400px;
-  outline-style: solid;
-  outline-color: black;
-  outline-width: medium;
-  width: 300px;
-  background-size: 300px 400px;
-  background-image:url('picture/tulalip.png');
-
-}
-
-li p{
-      margin: -218px 68px;
-      font-size: 1.5em;
-      color: red;
-}
 
 /*footer styling*/
 footer {
   clear: both;
   margin: 30px 0px;
   height: 130px;
-  overflow: hidden;
   border: solid #111b35;
   border-width: 5px 0px 5px 0px;
+  background-size: 100% 130px;
+  background-image: url('../image/bluebasket.jpg');
+  background-repeat: no-repeat;
 }
 
 footer img {
@@ -201,9 +107,9 @@ footer img {
   opacity: 0.8;
 }
 
-footer p{
+footer p {
   position: absolute;
-  color: black;
-  margin-top: -130px;
   align: center;
+  margin-top: -130px;
+  color: black;
 }

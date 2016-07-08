@@ -1,95 +1,100 @@
+p {
+  color: #333;
+}
+
 div p {
   display: block;
-  height: 450px;
-  margin-top:30px;
+  height: 500px;
+  margin:30px 5px 0px 18px;
 }
-main{
-  margin: 43px auto;
+
+section p a {
+  color: #ac0400;
 }
+
+h2 {
+  font-family: 'Rock Salt', cursive;
+  font-size: 2em;
+  color: #eee;
+  background-color: #111b35;
+  border-radius: 5px;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.outer {
+  width: 400px;
+  margin: 30px;
+  border: 5px solid #111b35;
+  border-radius: 5px;
+}
+
+.picture {
+  width: 400px;
+  height: 200px;
+  margin-bottom: 15px;
+  background-size: 400px 400px;
+}
+
+.picture:hover {
+  width: 400px;
+  background-size: 400px 400px;
+}
+
+#makeMeABlock {
+  display: block;
+}
+
 #firstOne{
   float: left;
-  width: 400px;
-  margin:30px 30px;
-  border-style: dashed;
-  border-width: medium;
 }
 
 #alison {
   float: left;
-  width:400px;
-  height:200px;
-  margin-bottom:15px;
-  background-image: url('http://placecage.com/300/200');
+  background-image: url('faces/alison.jpg');
 }
 
 #alison:hover {
-  opacity: 0.5px;
-  width: 400px;
-  background-image: url('http://www.placecage.com/gif/350/200');
+  background-image: url('faces/alison_face.jpg');
 }
 
-#secondOne{
+#secondOne {
   float: right;
-  width: 400px;
-  margin:30px 30px;
-  border-style: dashed;
-  border-width: medium;
 }
 
-#aziza{
+#aziza {
   float:right;
-  width:400px;
-  height:200px;
-  margin-bottom:15px;
-  background-image: url('http://placecage.com/300/200');
+  background-image: url('faces/aziza.jpg');
 }
 
 #aziza:hover {
-  opacity: 0.5px;
-  width: 400px;
-  background-image: url('http://www.placecage.com/g/200/300');
+  background-image: url('faces/aziza_face.jpg');
 }
 
-#thirdOne{
+#thirdOne {
   float:left;
-  width: 400px;
-  margin:30px 30px;
-  border-style: dashed;
-  border-width: medium;
 }
 
-#derek{
+#derek {
   float:right;
-  width:400px;
-  height:200px;
-  margin-bottom:15px;
-  background-image: url('http://placecage.com/300/200');
+  background-image: url('faces/derek.jpg');
 }
 
 #derek:hover {
-  opacity: 0.5px;
-  width: 400px;
-  background-image: url('http://www.placecage.com/200/350');
+  background-image: url('faces/derek_face.jpg');
 }
 
-#forthOne{
+#forthOne {
   float: right;
-  width: 400px;
-  margin:30px 30px;
-  border-style: dashed;
-  border-width: medium;
 }
 
-#elizabeth{
+#elizabeth {
   float:left;
-  width:400px;
-  height:200px;
-  margin-bottom:15px;
-  background-image: url('http://placecage.com/300/200');
+  background-image: url('faces/liz.jpg');
 }
 
-#elizabeth:hover{
-  opacity: 0.5px;
-  width: 400px;
-  background-image: url('http://www.placecage.com/gif/350/345');
+#elizabeth:hover {
+  background-size: 400px 200px;
+  background-image: url('faces/liz_face.jpg');
 }
