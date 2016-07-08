@@ -3,10 +3,6 @@ body li {
   margin-bottom: 30px;
 }
 
-.section {
-  margin: 30px auto;
-}
-
 h2 {
   font-family: 'Rock Salt', cursive;
   font-size: 2em;
@@ -16,6 +12,24 @@ h2 {
   padding: 10px 20px;
   display: inline-block;
   margin-bottom: 15px;
+}
+
+.section {
+  margin: 30px auto;
+}
+
+.next_flashcard {
+  display: inline-block;
+  margin-left: 200px;
+  margin-right: 50px;
+}
+
+.take_test {
+  display: none;
+}
+
+.show_take_test {
+  display: inline-block;
 }
 
 #flashcard {
@@ -42,18 +56,4 @@ h2 {
   font-size: 3em;
   color: #eee;
   margin-top: 115px;
-}
-
-.next_flashcard {
-  display: inline-block;
-  margin-left: 200px;
-  margin-right: 50px;
-}
-
-.take_test {
-  display: none;
-}
-
-.show_take_test {
-  display: inline-block;
 }
