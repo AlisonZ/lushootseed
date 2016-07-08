@@ -8,6 +8,7 @@ a {
   cursor: pointer;
 }
 
+/*header styling*/
 header {
   background-image: url('../image/bluebasket_flipped.jpg');
   background-size: 100% 130px;
@@ -19,27 +20,27 @@ header {
   margin: 30px 0px;
 }
 
-.header_inner{
-  width: 960px;
-  margin: 0px auto;
-  position: relative;
-}
-
 h1 {
   position: absolute;
+  top: -25px;
+  margin-left: 15px;
+  border-radius: 5px;
+  padding: 12px 20px;
+  background-color: #111b35;
   font-family: 'Rock Salt', cursive;
   font-size: 2.5em;
   color: #eee;
-  background-color: #111b35;
-  border-radius: 5px;
   cursor: pointer;
-  top: -25px;
-  padding: 12px 20px;
-  margin-left: 15px;
 }
 
 h1 a {
   color: #eee;
+}
+
+.header_inner {
+  position: relative;
+  width: 960px;
+  margin: 0px auto;
 }
 
 #nav {
@@ -53,15 +54,16 @@ h1 a {
 }
 
 #nav li a {
+  border-radius: 3px;
+  background-color: #ac0400;
+  padding: 2px 10px;
   font-family: 'Permanent Marker', cursive;
   font-size: 1.5em;
   color: #eee;
-  background-color: #ac0400;
-  border-radius: 3px;
-  padding: 2px 10px;
   cursor: pointer;
 }
 
+/*main styling*/
 main {
   width: 960px;
   margin: 0px auto;
@@ -69,21 +71,21 @@ main {
 
 
 p {
+  margin-bottom: 30px;
   font-family: 'Architects Daughter', cursive;
   font-size: 1.25em;
-  margin-bottom: 30px;
   line-height: 22px;
 }
 
 button {
+  margin: 10px 30px;
   border: none;
+  border-radius: 3px;
+  background-color: #111b35;
+  padding: 2px 10px;
   font-family: 'Permanent Marker', cursive;
   font-size: 1.5em;
   color: #eee;
-  margin: 10px 30px;
-  border-radius: 3px;
-  padding: 2px 10px;
-  background-color: #111b35;
   cursor: pointer;
 }
 
@@ -93,11 +95,11 @@ footer {
   clear: both;
   margin: 30px 0px;
   height: 130px;
-  background-image: url('../image/bluebasket.jpg');
-  background-size: 100% 130px;
-  background-repeat: no-repeat;
   border: solid #111b35;
   border-width: 5px 0px 5px 0px;
+  background-size: 100% 130px;
+  background-image: url('../image/bluebasket.jpg');
+  background-repeat: no-repeat;
 }
 
 footer img {
@@ -105,9 +107,9 @@ footer img {
   opacity: 0.8;
 }
 
-footer p{
+footer p {
   position: absolute;
-  color: black;
-  margin-top: -130px;
   align: center;
+  margin-top: -130px;
+  color: black;
 }
