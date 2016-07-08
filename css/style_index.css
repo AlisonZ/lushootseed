@@ -9,9 +9,90 @@ p {
 
 .clearfix {
   clear: both;
-  /*height: 0px;*/
 }
 
 #language_info {
   padding: 0px 5px;
+}
+
+section img{
+  width: 960px;
+  outline-style: solid;
+  outline-color: black;
+  outline-width: medium;
+}
+
+#sub_banner li{
+  float:left;
+}
+
+#learn {
+  height:400px;
+  outline-style: solid;
+  outline-color: black;
+  outline-width: medium;
+  width: 300px;
+  background-size: 300px 400px;
+  background-image: url('picture/left.jpeg');
+}
+
+#learn:hover{
+  opacity: 0.5px;
+  height:400px;
+  outline-style: solid;
+  outline-color: black;
+  outline-width: medium;
+  width: 300px;
+  background-image:url('picture/learnPage.png');
+}
+
+#facebook{
+  margin-left: 30px;
+  height:400px;
+  outline-style: solid;
+  outline-color: black;
+  outline-width: medium;
+  width: 300px;
+  background-size: 300px 400px;
+  background-image: url('picture/center.jpeg');
+}
+
+#facebook:hover{
+  opacity: 0.5px;
+  height:400px;
+  outline-style: solid;
+  outline-color: black;
+  outline-width: medium;
+  width: 300px;
+  background-size: 300px 400px;
+  background-image:url('picture/facebook.png');
+}
+
+#tulalip{
+  margin-left: 30px;
+  height:400px;
+  margin-right: 0px;
+  outline-style: solid;
+  outline-color: black;
+  outline-width: medium;
+  width: 300px;
+  background-size: 300px 400px;
+  background-image: url('picture/right.jpeg');
+}
+
+#tulalip:hover{
+  opacity: 0.5px;
+  height:400px;
+  outline-style: solid;
+  outline-color: black;
+  outline-width: medium;
+  width: 300px;
+  background-size: 300px 400px;
+  background-image:url('picture/tulalip.png');
+}
+
+li p{
+  margin: -218px 68px;
+  font-size: 1.5em;
+  color: red;
 }
