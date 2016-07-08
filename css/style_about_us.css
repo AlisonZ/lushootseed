@@ -1,18 +1,22 @@
 div p {
   display: block;
   height: 450px;
-  margin-top:30px;
-      margin-left: 18px;
+  margin:30px 0px 0px 18px;
 }
-main{
+
+main {
   margin: 43px auto;
 }
+
+.outer {
+  width: 400px;
+  margin: 30px;
+  border: 5px solid #111b35;
+  border-radius: 5px;
+}
+
 #firstOne{
   float: left;
-  width: 400px;
-  margin:30px 30px;
-  border-style: solid;
-  border-width: medium;
 }
 
 #alison {
@@ -31,15 +35,11 @@ main{
   background-image: url('faces/alison_face.jpg');
 }
 
-#secondOne{
+#secondOne {
   float: right;
-  width: 400px;
-  margin:30px 30px;
-  border-style: solid;
-  border-width: medium;
 }
 
-#aziza{
+#aziza {
   float:right;
   width:400px;
   height:200px;
@@ -55,15 +55,11 @@ main{
   background-image: url('faces/aziza_face.jpg');
 }
 
-#thirdOne{
+#thirdOne {
   float:left;
-  width: 400px;
-  margin:30px 30px;
-  border-style: solid;
-  border-width: medium;
 }
 
-#derek{
+#derek {
   float:right;
   width:400px;
   height:200px;
@@ -79,15 +75,11 @@ main{
   background-image: url('faces/derek_face.jpg');
 }
 
-#forthOne{
+#forthOne {
   float: right;
-  width: 400px;
-  margin:30px 30px;
-  border-style: solid;;
-  border-width: medium;
 }
 
-#elizabeth{
+#elizabeth {
   float:left;
   width:400px;
   height:200px;
@@ -96,7 +88,7 @@ main{
   background-image: url('faces/liz.jpg');
 }
 
-#elizabeth:hover{
+#elizabeth:hover {
   opacity: 0.5px;
   width: 400px;
   background-size: 400px 200px;
