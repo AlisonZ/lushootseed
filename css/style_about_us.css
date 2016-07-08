@@ -12,6 +12,17 @@ section p a {
   color: #ac0400;
 }
 
+h2 {
+  font-family: 'Rock Salt', cursive;
+  font-size: 2em;
+  color: #eee;
+  background-color: #111b35;
+  border-radius: 5px;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
 .outer {
   width: 400px;
   margin: 30px;
@@ -29,6 +40,10 @@ section p a {
 .picture:hover {
   width: 400px;
   background-size: 400px 400px;
+}
+
+#makeMeABlock {
+  display: block;
 }
 
 #firstOne{
