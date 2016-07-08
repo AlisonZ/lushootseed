@@ -1,25 +1,43 @@
+p {
+  margin-top: 30px;
+}
+
 div ul li {
   width: 300px;
   height: 400px;
 }
 
-p {
-  margin-top: 30px;
+section img{
+  width: 960px;
+  outline: 5px solid #111b35;
+}
+
+li p{
+  margin: -218px 68px;
+  font-size: 1.5em;
+  color: red;
 }
 
 .clearfix {
   clear: both;
 }
 
-#language_info {
-  padding: 0px 5px;
+.pic_link {
+  height: 400px;
+  width: 300px;
+  outline: 5px solid #111b35;
+  background-size: 300px 400px;
 }
 
-section img{
-  width: 960px;
-  outline-style: solid;
-  outline-color: black;
-  outline-width: medium;
+.pic_link:hover {
+  height: 400px;
+  width: 300px;
+  outline: 5px solid #111b35;
+  background-size: 300px 400px;
+}
+
+#language_info {
+  padding: 0px 5px;
 }
 
 #sub_banner li{
@@ -27,72 +45,27 @@ section img{
 }
 
 #learn {
-  height:400px;
-  outline-style: solid;
-  outline-color: black;
-  outline-width: medium;
-  width: 300px;
-  background-size: 300px 400px;
   background-image: url('picture/left.jpeg');
 }
 
 #learn:hover{
-  opacity: 0.5px;
-  height:400px;
-  outline-style: solid;
-  outline-color: black;
-  outline-width: medium;
-  width: 300px;
   background-image:url('picture/learnPage.png');
 }
 
 #facebook{
   margin-left: 30px;
-  height:400px;
-  outline-style: solid;
-  outline-color: black;
-  outline-width: medium;
-  width: 300px;
-  background-size: 300px 400px;
   background-image: url('picture/center.jpeg');
 }
 
 #facebook:hover{
-  opacity: 0.5px;
-  height:400px;
-  outline-style: solid;
-  outline-color: black;
-  outline-width: medium;
-  width: 300px;
-  background-size: 300px 400px;
   background-image:url('picture/facebook.png');
 }
 
 #tulalip{
   margin-left: 30px;
-  height:400px;
-  margin-right: 0px;
-  outline-style: solid;
-  outline-color: black;
-  outline-width: medium;
-  width: 300px;
-  background-size: 300px 400px;
   background-image: url('picture/right.jpeg');
 }
 
 #tulalip:hover{
-  opacity: 0.5px;
-  height:400px;
-  outline-style: solid;
-  outline-color: black;
-  outline-width: medium;
-  width: 300px;
-  background-size: 300px 400px;
   background-image:url('picture/tulalip.png');
-}
-
-li p{
-  margin: -218px 68px;
-  font-size: 1.5em;
-  color: red;
 }
