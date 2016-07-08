@@ -102,26 +102,15 @@ footer {
   background-repeat: no-repeat;
 }
 
-footer img {
-  width: 100%;
-  opacity: 0.8;
-}
-
-footer p {
-  position: absolute;
-  align: center;
-  margin-top: -130px;
-  color: black;
-}
-
 #copyright{
-  height:30px;
-  width:250px;
+  width:320px;
+  display: block;
   margin: 0 auto;
   background-color: #111b35;
   text-align: center;
   color: #eee;
-  margin-top: 50px;
-  padding-top: 10px;
-  border-radius: 4px;
+  font-family: 'Rock Salt', cursive;
+  margin-top: 44px;
+  border-radius: 5px;
+  padding: 10px;
 }
